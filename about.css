@@ -1,0 +1,264 @@
+/* about.css */
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+}
+
+.section-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+}
+
+.text-primary {
+    color: #0B3D91 !important;
+}
+
+.brand-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 60vh;
+    background: url('images/about-hero-bg.webp') center center/cover no-repeat fixed;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(0,0,0,0.4);
+    border-radius: 0.5rem;
+}
+
+.hero-title {
+    font-size: 3rem;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.hero-btn {
+    font-weight: 600;
+    border-radius: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #e0a800;
+    color: #fff;
+}
+
+/* Shape Dividers */
+.shape-divider-bottom, .shape-divider-top-bottom {
+    position: relative;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.shape-divider-bottom svg, .shape-divider-top-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 120px;
+}
+
+/* Floating WhatsApp Icon */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp-float img {
+    width: 35px;
+    height: 35px;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+}
+
+/* Company Overview Section */
+#company-overview p {
+    font-size: 1.25rem;
+}
+
+#company-overview img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Owner Portfolio Section */
+#owner-portfolio .owner-profile img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+#owner-portfolio h3 {
+    margin-top: 1rem;
+}
+
+#owner-portfolio p {
+    font-size: 1.1rem;
+}
+
+/* Key Attractions Cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Testimonials and TripAdvisor Reviews */
+.testimonial-box, .tripadvisor-review {
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-box:hover, .tripadvisor-review:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.testimonial-box h5, .tripadvisor-review h5 {
+    font-size: 1.25rem;
+}
+
+.testimonial-box p, .tripadvisor-review p {
+    font-size: 1rem;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #0B3D91;
+    border-color: #0B3D91;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0941a6;
+    border-color: #0941a6;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.btn-outline-primary {
+    color: #0B3D91;
+    border-color: #0B3D91;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #0B3D91;
+    color: #fff;
+}
+
+/* Footer */
+footer a.social-link:hover {
+    text-decoration: underline;
+    color: #f8d210 !important; /* A subtle highlight color */
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 50vh;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .section-heading {
+        font-size: 2rem;
+    }
+
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .whatsapp-float img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .testimonial-box p, .tripadvisor-review p {
+        font-size: 0.95rem;
+    }
+
+    .card-text {
+        font-size: 0.95rem;
+    }
+}
+
+/* Additional Styles */
+.btn-book {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-book:hover {
+    background-color: #1E63CE !important;
+    transform: scale(1.05);
+}
+
+footer a.social-link {
+    transition: color 0.3s ease;
+}
