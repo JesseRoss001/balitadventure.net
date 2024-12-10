@@ -1,220 +1,357 @@
-/* about.css */
-
-/* General Styles */
+/* Importing Montserrat and Poppins fonts */
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
     color: #333;
-    background-color: #fff;
     margin: 0;
     padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500; /* Reduced font weight for lighter titles */
 }
 
-.section-heading {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
+.header .brand-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
 }
 
-.text-primary {
-    color: #0B3D91 !important;
-}
-
-.brand-title {
-    font-family: 'Playfair Display', serif;
-    font-weight: 900;
-}
-
-/* Hero Section */
 .hero-section {
     height: 60vh;
-    background: url('images/about-hero-bg.webp') center center/cover no-repeat fixed;
-    position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    justify-content: center;
+    position: relative;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
 
 .hero-content {
-    max-width: 700px;
-    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.6);
     padding: 2rem;
-    background: rgba(0,0,0,0.4);
     border-radius: 0.5rem;
 }
 
 .hero-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 600; /* Adjusted for better aesthetics */
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
-    font-weight: 500;
+    color: #ddd;
 }
 
 .hero-btn {
+    border-radius: 50px;
     font-weight: 600;
-    border-radius: 2rem;
-    transition: background-color 0.3s ease;
-}
-
-.hero-btn:hover {
-    background-color: #e0a800;
-    color: #fff;
-}
-
-/* Shape Dividers */
-.shape-divider-bottom, .shape-divider-top-bottom {
-    position: relative;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.shape-divider-bottom svg, .shape-divider-top-bottom svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 120px;
-}
-
-/* Floating WhatsApp Icon */
-.whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366;
-    color: #fff;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.whatsapp-float img {
-    width: 35px;
-    height: 35px;
+.hero-btn:hover {
+    background-color: #ffc107;
+    transform: translateY(-5px);
+}
+
+/* Shape Dividers */
+.shape-divider-bottom svg, .shape-divider-top-bottom svg {
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
+.visually-hidden-focusable:focus {
+    position: absolute;
+    top: 0; left: 0;
+    background: #000; color: #fff;
+    padding: 1em; z-index: 1000;
+}
+
+/* WhatsApp Floating Icon */
+.whatsapp-float {
+    position: fixed;
+    width: 60px; height: 60px;
+    bottom: 20px; right: 20px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .whatsapp-float:hover {
-    background-color: #128C7E;
     transform: scale(1.1);
+    box-shadow: 4px 4px 20px rgba(0,0,0,0.4);
 }
 
-/* Company Overview Section */
-#company-overview p {
-    font-size: 1.25rem;
+.whatsapp-float img {
+    width: 30px;
+    height: 30px;
 }
 
-#company-overview img {
-    max-width: 100%;
-    height: auto;
+/* Section Headings */
+.section-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600; /* Adjusted for better aesthetics */
 }
 
-/* Owner Portfolio Section */
-#owner-portfolio .owner-profile img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+.text-primary {
+    color: #0dcaf0 !important; /* Teal color for primary text */
 }
 
-#owner-portfolio h3 {
-    margin-top: 1rem;
-}
-
-#owner-portfolio p {
-    font-size: 1.1rem;
-}
-
-/* Key Attractions Cards */
-.card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
-}
-
-.card-title {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-}
-
-.card-text {
-    font-size: 1rem;
-    color: #666;
-}
-
-/* Testimonials and TripAdvisor Reviews */
-.testimonial-box, .tripadvisor-review {
-    border-radius: 0.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.testimonial-box:hover, .tripadvisor-review:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-.testimonial-box h5, .tripadvisor-review h5 {
-    font-size: 1.25rem;
-}
-
-.testimonial-box p, .tripadvisor-review p {
-    font-size: 1rem;
-}
-
-/* Buttons */
 .btn-primary {
-    background-color: #0B3D91;
-    border-color: #0B3D91;
+    background-color: #0dcaf0;
+    border-color: #0dcaf0;
+    color: #fff;
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #0941a6;
-    border-color: #0941a6;
+    background-color: #0bb5d0;
+    border-color: #0bb5d0;
 }
 
-.btn-danger {
-    background-color: #dc3545;
-    border-color: #dc3545;
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: #fff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.btn-danger:hover {
-    background-color: #c82333;
-    border-color: #bd2130;
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
 }
 
-.btn-outline-primary {
-    color: #0B3D91;
-    border-color: #0B3D91;
-    transition: background-color 0.3s ease, color 0.3s ease;
+.btn-success {
+    background-color: #198754;
+    border-color: #198754;
+    color: #fff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #157347;
+    border-color: #146c43;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #212529;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
 }
 
 .btn-outline-primary:hover {
-    background-color: #0B3D91;
+    background-color: #0dcaf0;
     color: #fff;
 }
 
-/* Footer */
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-outline-success:hover {
+    background-color: #198754;
+    color: #fff;
+}
+
+.btn-outline-warning:hover {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.section-heading.text-primary {
+    color: #0dcaf0;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #212529;
+}
+
+footer h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+footer a {
+    color: #adb5bd;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #0dcaf0;
+    text-decoration: none;
+}
+
+footer .social-media-links a {
+    font-size: 1rem;
+}
+
+/* Vehicle Cards with Metallic Look */
+.metallic-card {
+    background: linear-gradient(135deg, #d4d4d4, #a9a9a9);
+    border: 1px solid #808080;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.metallic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.metallic-card .card-img-top {
+    height: 300px;
+    object-fit: cover;
+}
+
+.metallic-card .card-body {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.metallic-card h3 {
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.metallic-card p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.metallic-card .btn-primary {
+    background-color: #555;
+    border-color: #555;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.metallic-card .btn-primary:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+/* Masonry Layout */
+.masonry {
+    column-count:4;
+    column-gap:1rem;
+}
+
+.masonry-item {
+    margin-bottom:1rem;
+    break-inside:avoid;
+}
+
+.gallery-img {
+    width:100%;
+    display:block;
+    border-radius:0.5rem;
+}
+
+/* Footer Links */
+footer a {
+    color: #adb5bd;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #0dcaf0;
+    text-decoration: underline;
+}
+
 footer a.social-link:hover {
     text-decoration: underline;
     color: #f8d210 !important; /* A subtle highlight color */
 }
 
 /* Responsive Tweaks */
+@media (max-width:992px) {
+    .masonry {
+        column-count:2;
+    }
+    .hero-section {
+        height:50vh;
+    }
+    .section-heading {
+        font-size:2rem;
+    }
+}
+
+@media (max-width:576px) {
+    .masonry {
+        column-count:1;
+    }
+}
+
+/* Additional Styles for Metallic Effect */
+.metallic-card {
+    background: linear-gradient(135deg, #d4d4d4, #a9a9a9);
+    border: 1px solid #808080;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.metallic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.metallic-card .card-img-top {
+    height: 300px;
+    object-fit: cover;
+}
+
+.metallic-card .card-body {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.metallic-card h3 {
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.metallic-card p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.metallic-card .btn-primary {
+    background-color: #555;
+    border-color: #555;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.metallic-card .btn-primary:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+/* Footer Links */
+footer a.social-link:hover {
+    text-decoration: underline;
+    color: #f8d210 !important; /* A subtle highlight color */
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .hero-section {
         height: 50vh;
