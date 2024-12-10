@@ -21,6 +21,23 @@
 
     <!-- Modern Bootstrap Navbar -->
     <header class="header bg-white shadow-sm">
+ <!-- Sticky Currency Bar -->
+    <div class="currency-bar bg-gradient-secondary text-white py-2 shadow-sm" id="currencyBar">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+            <div class="mb-2 mb-md-0">
+                <strong>Choose your currency:</strong>
+            </div>
+            <div class="btn-group" role="group" aria-label="Currency Switcher">
+                <button type="button" class="btn btn-outline-light currency-btn" data-currency="IDR" aria-label="Show prices in Indonesian Rupiah" title="Convert prices to IDR">IDR</button>
+                <button type="button" class="btn btn-outline-light currency-btn" data-currency="USD" aria-label="Show prices in US Dollars" title="Convert prices to USD">USD</button>
+                <button type="button" class="btn btn-outline-light currency-btn" data-currency="GBP" aria-label="Show prices in British Pounds" title="Convert prices to GBP">GBP</button>
+                <button type="button" class="btn btn-outline-light currency-btn" data-currency="EUR" aria-label="Show prices in Euros" title="Convert prices to EUR">EUR</button>
+                <button type="button" class="btn btn-outline-light currency-btn" data-currency="AUD" aria-label="Show prices in Australian Dollars" title="Convert prices to AUD">AUD</button>
+                <button type="button" class="btn btn-outline-light currency-btn" data-currency="RUB" aria-label="Show prices in Russian Rubles" title="Convert prices to RUB">RUB</button>
+            </div>
+          
+        </div>
+    </div>
         <nav class="navbar navbar-expand-lg navbar-light bg-white" aria-label="Main navigation">
             <div class="container">
                 <!-- Brand -->
@@ -107,23 +124,7 @@
     </header>
                   
       
-    <!-- Sticky Currency Bar -->
-    <div class="currency-bar bg-gradient-secondary text-white py-2 shadow-sm" id="currencyBar">
-        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
-            <div class="mb-2 mb-md-0">
-                <strong>Choose your currency:</strong>
-            </div>
-            <div class="btn-group" role="group" aria-label="Currency Switcher">
-                <button type="button" class="btn btn-outline-light currency-btn" data-currency="IDR" aria-label="Show prices in Indonesian Rupiah" title="Convert prices to IDR">IDR</button>
-                <button type="button" class="btn btn-outline-light currency-btn" data-currency="USD" aria-label="Show prices in US Dollars" title="Convert prices to USD">USD</button>
-                <button type="button" class="btn btn-outline-light currency-btn" data-currency="GBP" aria-label="Show prices in British Pounds" title="Convert prices to GBP">GBP</button>
-                <button type="button" class="btn btn-outline-light currency-btn" data-currency="EUR" aria-label="Show prices in Euros" title="Convert prices to EUR">EUR</button>
-                <button type="button" class="btn btn-outline-light currency-btn" data-currency="AUD" aria-label="Show prices in Australian Dollars" title="Convert prices to AUD">AUD</button>
-                <button type="button" class="btn btn-outline-light currency-btn" data-currency="RUB" aria-label="Show prices in Russian Rubles" title="Convert prices to RUB">RUB</button>
-            </div>
-          
-        </div>
-    </div>
+   
 
     <!-- Header Section -->
     <header class="bg-gradient-header text-white py-5">

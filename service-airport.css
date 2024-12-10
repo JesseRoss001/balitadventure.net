@@ -11,6 +11,8 @@ h1, h2, h3, h4 {
     font-weight: 700;
 }
 
+#navbarContent > ul > li > ul {z-index: 3000 !important;}
+
 /* Gradient Backgrounds */
 .bg-gradient-primary {
     background: linear-gradient(135deg, #0B3D91, #1E63CE);
@@ -49,7 +51,7 @@ h1, h2, h3, h4 {
 /* Currency Bar Styles */
 .currency-bar {
     position: sticky;
-    top: 56px; /* Height of navbar */
+     /* Height of navbar */
     z-index: 998;
 }
 
@@ -86,7 +88,7 @@ header::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(11, 61, 145, 0.6);
+    
 }
 
 header .container {
