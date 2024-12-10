@@ -16,48 +16,97 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary sticky-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
-                <i class="bi bi-car-front-fill me-2"></i> Bali Transfers
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">
-                            <i class="bi bi-house-door-fill"></i> Home
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">
-                            <i class="bi bi-pen-fill"></i> Blog
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="gallery.html">
-                            <i class="bi bi-image-fill"></i> Gallery
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">
-                            <i class="bi bi-envelope-fill"></i> Contact
-                        </a>
-                    </li>
-                    <!-- Currency Toggle Icon -->
+     <!-- Skip to main content link for accessibility -->
+    <a class="visually-hidden-focusable skip-link" href="#main-content" aria-label="Skip to main content">Skip to main content</a>
+
+    <!-- Modern Bootstrap Navbar -->
+    <header class="header bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white" aria-label="Main navigation">
+            <div class="container">
+                <!-- Brand -->
+                <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="index.html"
+                   title="Go to BaliTransport.net homepage" aria-label="BaliTransport.net homepage">
+                    <span class="fs-4 brand-title">BaliTransport<span class="text-danger">.net</span></span>
+                </a>
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <!-- Home -->
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" href="index.html" title="Home">Home</a>
+                        </li>
+                        <!-- Blog Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-secondary" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Blog">
+                                Blog
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+                                <li><a class="dropdown-item" href="bali-swim.html" title="Best beaches to swim Bali">Best Beaches to Swim Bali</a></li>
+                                <li><a class="dropdown-item" href="best-month-bali.html" title="Best month to visit Bali">Best Month to Visit Bali</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                
+                            </ul>
+                        </li>
+                        <!-- Services Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-secondary" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Services">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" href="services-airport.html" title="Airport Travel">Airport Travel</a></li>
+                                <li><a class="dropdown-item" href="Jeep.html" title="Jeep Tracking">Jeep Tracking</a></li>
+                                <li><a class="dropdown-item" href="cycling-horse.html" title="Cycling & Horse Riding">Cycling & Horse Riding</a></li>
+                                <li><a class="dropdown-item" href="Swing.html" title="Swing Adventures">Swing Adventures</a></li>
+                                <li><a class="dropdown-item" href="Atv.html" title="ATV Tours">ATV Tours</a></li>
+                                <li><a class="dropdown-item" href="Baliwatersport.html" title="Water Sports">Water Sports</a></li>
+                                <li><a class="dropdown-item" href="Raft-trek.html" title="Rafting & Trekking">Rafting & Trekking</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                
+                            </ul>
+                        </li>
+                        <!-- Vehicle Rentals -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-secondary" href="#" id="vehicleDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Vehicle Rentals">
+                                Vehicle Rentals
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="vehicleDropdown">
+                                <li><a class="dropdown-item" href="vehicle-rentals.html" title="All Vehicle Rentals">All Vehicles</a></li>
+                                <li><a class="dropdown-item" href="jeep.html" title="Jeep Rentals">Jeep Rentals</a></li>
+                                <li><a class="dropdown-item" href="atv.html" title="ATV Rentals">ATV Rentals</a></li>
+                                <li><a class="dropdown-item" href="swing.html" title="Swing Rentals">Swing Rentals</a></li>
+                                <!-- Add more vehicle rental options as needed -->
+                            </ul>
+                        </li>
+                        <!-- Gallery -->
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" href="gallery.html" title="Gallery">Gallery</a>
+                        </li>
+                        <!-- About -->
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" href="about.html" title="About Us">About</a>
+                        </li>
+                        <!-- Contact -->
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" href="contact.html" title="Contact Us">Contact Us</a>
+                        </li>
+  <!-- Currency Toggle Icon -->
                     <li class="nav-item">
                         <button class="btn btn-outline-light ms-3" id="currencyToggle" aria-label="Toggle Currency Converter">
                             <i class="bi bi-currency-exchange"></i>
                         </button>
                     </li>
-                </ul>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-
+        </nav>
+    </header>
+                  
+      
     <!-- Sticky Currency Bar -->
     <div class="currency-bar bg-gradient-secondary text-white py-2 shadow-sm" id="currencyBar">
         <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
