@@ -1,0 +1,118 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+.text-primary {
+    color: #0B3D91 !important;
+}
+
+.navbar-nav .nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0B3D91 !important;
+    text-decoration: underline;
+}
+
+.hero-section {
+    height: 80vh;
+    background: linear-gradient(to bottom right, #0093E9, #80D0C7);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.hero-section h1 {
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.shape-divider-bottom svg, .shape-divider-top-bottom svg {
+    display: block;
+    width: 100%;
+    height: 80px;
+    line-height: 0;
+}
+
+#activities .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+}
+
+.activity-card img {
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.service-box {
+    background-color: #f8f9fa;
+    border: 1px solid #0B3D91;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+footer {
+    background-color: #343a40;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    color: #fff;
+}
+
+/* Shape dividers */
+.shape-divider-bottom, .shape-divider-top-bottom {
+    position: relative;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.shape-divider-bottom svg {
+    position: relative;
+    display: block;
+}
+
+.shape-divider-top-bottom svg {
+    position: relative;
+    display: block;
+    margin-top: -1px;
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        height: 60vh;
+    }
+}
