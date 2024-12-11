@@ -3,48 +3,223 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Experience the thrill of Jeep Tracking adventures in Bali with BaliTransport.net. Explore Mount Batur, enjoy scenic routes, and relax in hot springs or a spa afterward."/>
+    <meta name="description" content="Experience thrilling Jeep Tracking adventures in Bali with BaliTransport.net. Explore Mount Batur, enjoy scenic routes, and unwind in a spa or hot springs."/>
     <meta name="keywords" content="Bali Jeep Tracking, Mount Batur Jeep, Bali off-road tours, Jeep adventure Bali, Bali volcanic tours"/>
     <meta name="author" content="BaliTransport.net"/>
-    <title>Bali Jeep Tracking Adventures | BaliTransport.net</title>
+    <title>Jeep Tracking Adventures | BaliTransport.net</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Using Playfair Display for headings and Poppins for body -->
+    <!-- Playfair Display for headings and Poppins for body -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="jeep.css"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+
+        .brand-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            height: 100vh;
+            background: url('images/jeep-tracking-2.webp') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            padding: 2rem;
+        }
+
+        .hero-content {
+            background: rgba(0,0,0,0.5);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero-content .display-3 {
+            font-size: 2.5rem;
+        }
+
+        .hero-content .lead {
+            font-size: 1.25rem;
+        }
+
+        .hero-btn {
+            font-weight: 600;
+            border-radius: 2rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .hero-btn:hover {
+            background-color: #ffc107;
+            transform: translateY(-3px);
+        }
+
+        /* Shape Dividers */
+        .shape-divider-bottom svg,
+        .shape-divider-top-bottom svg {
+            display: block;
+            width: 100%;
+            height: 120px;
+        }
+
+        /* Package Cards */
+        .package-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        }
+
+        .btn-book {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn-book:hover {
+            background-color: #1E63CE !important;
+            transform: scale(1.05);
+        }
+
+        /* Testimonials */
+        .testimonial-box {
+            border-radius: 0.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        /* WhatsApp Floating Icon */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 4px 4px 20px rgba(0,0,0,0.4);
+        }
+
+        .whatsapp-float img {
+            width: 30px;
+            height: 30px;
+        }
+
+        footer {
+            background-color: #212529;
+            color: #fff;
+            font-size: 0.95rem;
+        }
+
+        footer a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #0dcaf0;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 992px) {
+            .hero-content .display-3 {
+                font-size: 2rem;
+            }
+            .hero-section {
+                height: 100vh !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-section {
+                height: auto;
+                padding: 4rem 1rem;
+            }
+            .hero-content .display-3 {
+                font-size: 1.75rem;
+            }
+            .hero-content .lead {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-     <!-- Skip to main content link for accessibility -->
+    <!-- Skip to main content link for accessibility -->
     <a class="visually-hidden-focusable skip-link" href="#main-content" aria-label="Skip to main content">Skip to main content</a>
 
-    <!-- Modern Bootstrap Navbar -->
-    <header class="header bg-white shadow-sm">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white" aria-label="Main navigation">
+    <!-- Floating WhatsApp Icon -->
+    <a href="https://api.whatsapp.com/send/?phone=628123925805&text=Hello%20BaliTransport.net,%20I%20would%20like%20to%20learn%20more%20about%20your%20services."
+       class="whatsapp-float"
+       target="_blank"
+       title="Chat with us on WhatsApp"
+       aria-label="Chat with us on WhatsApp">
+        <img src="images/icons8-whatsapp-50.png" alt="WhatsApp Chat Icon" />
+    </a>
+
+    <!-- Header / Sticky Navbar -->
+    <header class="header sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" aria-label="Main navigation of BaliTransport.net">
             <div class="container">
-                <!-- Brand -->
-                <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="index.html"
-                   title="Go to BaliTransport.net homepage" aria-label="BaliTransport.net homepage">
-                    <span class="fs-4 brand-title">BaliTransport<span class="text-danger">.net</span></span>
+                <a class="navbar-brand text-primary d-flex align-items-center fw-bold" href="index.html"
+                   title="Go to BaliTransport.net homepage" aria-label="BaliTransport.net homepage link">
+                   <span class="fs-4 brand-title">BaliTransport<span class="text-danger">.net</span></span>
                 </a>
-                <!-- Toggler/collapsibe Button -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-                        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarContent" aria-controls="navbarContent"
+                        aria-expanded="false" aria-label="Toggle navigation menu">
+                  <span class="navbar-toggler-icon"></span>
                 </button>
-                <!-- Navbar Links -->
+                
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <!-- Home -->
-                        <li class="nav-item">
-                            <a class="nav-link text-secondary" href="index.html" title="Home">Home</a>
-                        </li>
-                        <!-- Blog Dropdown -->
+                        <li class="nav-item"><a class="nav-link text-secondary" href="index.html" title="Home">Home</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-secondary" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Blog">
                                 Blog
@@ -53,10 +228,8 @@
                                 <li><a class="dropdown-item" href="bali-swim.html" title="Best beaches to swim Bali">Best Beaches to Swim Bali</a></li>
                                 <li><a class="dropdown-item" href="best-month-bali.html" title="Best month to visit Bali">Best Month to Visit Bali</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                
                             </ul>
                         </li>
-                        <!-- Services Dropdown -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-secondary" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Services">
                                 Services
@@ -69,50 +242,28 @@
                                 <li><a class="dropdown-item" href="Atv.html" title="ATV Tours">ATV Tours</a></li>
                                 <li><a class="dropdown-item" href="Baliwatersport.html" title="Water Sports">Water Sports</a></li>
                                 <li><a class="dropdown-item" href="Raft-trek.html" title="Rafting & Trekking">Rafting & Trekking</a></li>
+                                <li><a class="dropdown-item" href="golf.html" title="Golf">Golf</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                
                             </ul>
                         </li>
-                        <!-- Vehicle Rentals -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-secondary" href="#" id="vehicleDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Vehicle Rentals">
-                                Vehicle Rentals
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="vehicleDropdown">
-                                <li><a class="dropdown-item" href="vehicle-rentals.html" title="All Vehicle Rentals">All Vehicles</a></li>
-                                <li><a class="dropdown-item" href="jeep.html" title="Jeep Rentals">Jeep Rentals</a></li>
-                                <li><a class="dropdown-item" href="atv.html" title="ATV Rentals">ATV Rentals</a></li>
-                                <li><a class="dropdown-item" href="swing.html" title="Swing Rentals">Swing Rentals</a></li>
-                                <!-- Add more vehicle rental options as needed -->
-                            </ul>
-                        </li>
-                        <!-- Gallery -->
-                        <li class="nav-item">
-                            <a class="nav-link text-secondary" href="gallery.html" title="Gallery">Gallery</a>
-                        </li>
-                        <!-- About -->
-                        <li class="nav-item">
-                            <a class="nav-link text-secondary" href="about.html" title="About Us">About</a>
-                        </li>
-                        <!-- Contact -->
-                        <li class="nav-item">
-                            <a class="nav-link text-secondary" href="contact.html" title="Contact Us">Contact Us</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link text-secondary" href="gallery.html" title="Gallery">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link text-secondary" href="about.html" title="About Us">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-secondary" href="contact.html" title="Contact Us">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section with Parallax Background -->
-    <section class="hero-section text-white text-center d-flex align-items-center" aria-label="Jeep Tracking Adventures hero banner">
+    <!-- Hero Section -->
+    <section class="hero-section">
         <div class="container position-relative">
             <div class="hero-content">
-                <h1 class="display-3 fw-bold mb-3 hero-title">Bali Jeep Tracking</h1>
-                <p class="lead mb-4 hero-subtitle">Traverse rugged terrains, witness stunning volcano vistas, and embrace nature's raw beauty as you journey across Mount Batur in an open-top Jeep.</p>
+                <h1 class="display-3 fw-bold mb-3">Bali Jeep Tracking</h1>
+                <p class="lead mb-4">Traverse rugged volcano slopes, savor panoramic vistas, and embrace nature’s raw charm in a thrilling off-road Jeep adventure through Mount Batur’s landscapes.</p>
                 <a href="#main-content" class="btn btn-warning btn-lg hero-btn"
-                   title="Scroll down to view Jeep packages and details" aria-label="View Jeep packages and details">
-                   Discover Our Jeep Adventures
+                   title="Explore our Jeep packages" aria-label="View Jeep packages and details">
+                   Explore Our Packages
                 </a>
             </div>
         </div>
@@ -127,39 +278,34 @@
 
     <main id="main-content" class="container py-5" aria-label="Main content area">
         <!-- About Jeep Tracking Section -->
-        <section class="mb-5" aria-labelledby="about-jeep-title">
-            <h2 id="about-jeep-title" class="section-heading text-center mb-4 fw-bold text-primary">About Our Jeep Tracking</h2>
+        <section class="mb-5">
+            <h2 class="text-center mb-4 text-primary" style="font-weight:900;">About Our Jeep Tracking</h2>
             <p class="fs-5 text-muted">
-                Jeep Tracking in Bali is an exhilarating way to explore terrains unreachable by ordinary vehicles. With open-top Jeeps, you’ll weave through forests, skirt along rice fields, and climb volcanic slopes. Expect breathtaking mountain panoramas, glimpses of village life, and the quiet majesty of Bali’s untamed landscapes.
-            </p>
-            <p class="fs-5 text-muted mb-4">
-                Whether you’re an adrenaline junkie or a nature enthusiast, Jeep Tracking lets you connect with the island’s raw beauty. Our experienced guides ensure safety and share insights, turning each rugged route into a story worth telling.
+                Jeep Tracking in Bali unveils landscapes far beyond standard routes. With our expert drivers, journey into volcanic terrains and hidden paths. Appreciate Mount Batur’s grandeur, its black lava fields, and lush valleys. After your adventure, consider balancing the thrill with a peaceful break—check our <a href="bali-swim.html" class="text-decoration-underline text-primary" title="Discover Bali’s top swimming beaches">Best Beaches to Swim Bali</a> to unwind by the sea, or browse our <a href="gallery.html" class="text-decoration-underline text-primary" title="View our gallery">Gallery</a> for more inspiration.
             </p>
         </section>
 
         <!-- Jeep Packages Section -->
-        <section class="mb-5" aria-labelledby="packages-title">
-            <h2 id="packages-title" class="section-heading text-center mb-4 fw-bold text-primary">Jeep Tracking Packages</h2>
-            <p class="text-center text-muted mb-5 fs-5">From scenic volcanic trails to revitalizing add-ons like hot springs or spa sessions, choose the package that fuels your sense of adventure.</p>
+        <section class="mb-5">
+            <h2 class="text-center mb-4 text-primary" style="font-weight:900;">Jeep Tracking Packages</h2>
+            <p class="text-center text-muted mb-5 fs-5">Choose a Jeep experience that suits your style—straightforward volcanic trails or enhanced with spa or hot springs relaxation.</p>
 
             <div class="row g-4">
                 <!-- Gunung Batur Jeep Tracking -->
                 <div class="col-md-4">
                     <div class="card h-100 shadow-sm package-card">
-                        <img src="images/jeep-tracking-1.webp" class="card-img-top" style="height: 270px; object-fit: cover; object-position: center;"
-                             alt="A Jeep navigating the rocky terrain of Mount Batur"
-                             title="Gunung Batur Jeep Trekking - Explore volcanic landscapes">
+                        <img src="images/jeep-tracking-1.webp" class="card-img-top" style="height: 270px; object-fit: cover;" alt="Mount Batur Jeep" title="Gunung Batur Jeep Trekking">
                         <div class="card-body">
-                            <h5 class="card-title fw-bold text-primary">Gunung Batur Jeep Tracking</h5>
-                            <p class="card-text text-muted fs-6">
-                                Navigate the volcanic trails of Mount Batur and uncover rugged beauty at every turn. This adventure showcases craters, lush valleys, and panoramic views that define Bali’s volcanic heart.
+                            <h5 class="fw-bold text-primary">Gunung Batur Jeep Tracking</h5>
+                            <p class="text-muted fs-6">
+                                Discover rugged volcanic paths, witness crater views, and immerse in Mount Batur’s raw beauty.
                             </p>
                             <p class="fw-bold text-danger mb-2">Price: USD 38</p>
-                            <a href="https://api.whatsapp.com/send/?phone=628123925805&text&type=phone_number&app_absent=0"
+                            <a href="https://api.whatsapp.com/send/?phone=628123925805&text=Hello,+I%27m+interested+in+Gunung+Batur+Jeep+Tracking"
                                class="btn btn-primary rounded-pill px-4 py-2 mt-2 btn-book"
-                               title="Book the Gunung Batur Jeep Tracking via WhatsApp"
-                               aria-label="Book Gunung Batur Jeep Tracking on WhatsApp">
-                               Book Here
+                               title="Reserve your Jeep adventure via WhatsApp"
+                               aria-label="Reserve your Gunung Batur Jeep adventure">
+                               Reserve Your Jeep Adventure
                             </a>
                         </div>
                     </div>
@@ -168,20 +314,18 @@
                 <!-- Jeep Tracking + Spa -->
                 <div class="col-md-4">
                     <div class="card h-100 shadow-sm package-card">
-                        <img src="images/jeep-tracking-2.webp" class="card-img-top"
-                             alt="A Jeep parked near scenic terrain and a spa background"
-                             title="Jeep Tracking + Spa - Adventure followed by pure relaxation">
+                        <img src="images/jeep-tracking-2.webp" class="card-img-top" alt="Jeep Tracking + Spa" title="Jeep Tracking + Spa experience" style="height: 270px; object-fit: cover;">
                         <div class="card-body">
-                            <h5 class="card-title fw-bold text-primary">Jeep Tracking + Spa</h5>
-                            <p class="card-text text-muted fs-6">
-                                Experience an adrenaline-pumping Jeep ride through Mount Batur’s rugged landscapes, then treat yourself to a soothing spa session. Let natural treatments calm your muscles and rejuvenate your spirit.
+                            <h5 class="fw-bold text-primary">Jeep Tracking + Spa</h5>
+                            <p class="text-muted fs-6">
+                                Conquer off-road routes, then indulge in a rejuvenating spa session—balancing adrenaline with ultimate relaxation.
                             </p>
                             <p class="fw-bold text-danger mb-2">Price: USD 60</p>
-                            <a href="https://api.whatsapp.com/send/?phone=628123925805&text&type=phone_number&app_absent=0"
+                            <a href="https://api.whatsapp.com/send/?phone=628123925805&text=Hello,+I%27m+interested+in+Jeep+Tracking+%2B+Spa"
                                class="btn btn-primary rounded-pill px-4 py-2 mt-2 btn-book"
-                               title="Book Jeep Tracking + Spa via WhatsApp"
-                               aria-label="Book Jeep Tracking + Spa on WhatsApp">
-                               Book Here
+                               title="Arrange your Jeep + Spa session via WhatsApp"
+                               aria-label="Arrange your Jeep + Spa session">
+                               Secure This Spa-Infused Journey
                             </a>
                         </div>
                     </div>
@@ -190,47 +334,25 @@
                 <!-- Jeep Tracking + Hot Spring -->
                 <div class="col-md-4">
                     <div class="card h-100 shadow-sm package-card">
-                        <img src="images/jeep-tracking-3.webp" class="card-img-top"
-                             alt="A Jeep near a serene hot spring setting"
-                             title="Jeep Tracking + Hot Spring - Combine adventure and soothing waters">
+                        <img src="images/jeep-tracking-3.webp" class="card-img-top" alt="Jeep Tracking + Hot Spring" title="Jeep Tracking + Hot Spring relaxation" style="height: 270px; object-fit: cover;">
                         <div class="card-body">
-                            <h5 class="card-title fw-bold text-primary">Jeep Tracking + Hot Spring</h5>
-                            <p class="card-text text-muted fs-6">
-                                After conquering rocky trails, unwind in natural hot springs. This perfect blend of rugged adventure and soothing relaxation creates a memorable contrast you’ll savor.
+                            <h5 class="fw-bold text-primary">Jeep Tracking + Hot Spring</h5>
+                            <p class="text-muted fs-6">
+                                After rugged trails, soak in mineral-rich hot springs. Enjoy a perfect blend of excitement and tranquility.
                             </p>
                             <p class="fw-bold text-danger mb-2">Price: USD 55</p>
-                            <a href="https://api.whatsapp.com/send/?phone=628123925805&text&type=phone_number&app_absent=0"
+                            <a href="https://api.whatsapp.com/send/?phone=628123925805&text=Hello,+I%27m+interested+in+Jeep+Tracking+%2B+Hot+Spring"
                                class="btn btn-primary rounded-pill px-4 py-2 mt-2 btn-book"
-                               title="Book Jeep Tracking + Hot Spring via WhatsApp"
-                               aria-label="Book Jeep Tracking + Hot Spring on WhatsApp">
-                               Book Here
+                               title="Start your Jeep + Hot Spring adventure via WhatsApp"
+                               aria-label="Start your Jeep + Hot Spring adventure">
+                               Begin Your Hot Springs Escape
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Additional Options -->
-            <div class="mt-5 text-center fs-5">
-                <p class="text-muted">Looking for more adventures? Explore our other packages:</p>
-                <ul class="list-unstyled mb-4">
-                    <li><strong>ATV</strong> - Off-road thrills through jungles and fields.</li>
-                    <li><strong>Swing</strong> - Glide above lush canopies and terraces.</li>
-                    <li><strong>Rafting</strong> - Conquer white-water rapids for an adrenaline rush.</li>
-                    <li><strong>Trekking</strong> - Venture on foot through scenic landscapes.</li>
-                    <li><strong>Horse Riding</strong> - Explore at a gentle pace, bonding with nature.</li>
-                    <li><strong>Cycling</strong> - Cruise through charming villages and stunning vistas.</li>
-                </ul>
-                <p class="mt-3">
-                    <a href="https://api.whatsapp.com/send/?phone=628123925805&text&type=phone_number&app_absent=0"
-                       class="btn btn-success rounded-pill px-4 py-2"
-                       title="Contact us via WhatsApp for custom packages"
-                       aria-label="Contact us via WhatsApp for custom or additional packages">
-                       Customize Your Adventure
-                    </a>
-                </p>
-            </div>
-        </section>
+           
 
         <!-- Shape Divider -->
         <div class="shape-divider-top-bottom">
@@ -240,30 +362,30 @@
         </div>
 
         <!-- Testimonials Section -->
-        <section class="py-5 bg-light" aria-labelledby="testimonials-title">
-            <h2 id="testimonials-title" class="section-heading text-center mb-5 fw-bold text-primary">What Our Guests Say</h2>
+        <section class="py-5 bg-light">
+            <h2 class="text-center mb-5 text-primary" style="font-weight:900;">What Our Guests Say</h2>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="testimonial-box p-4 bg-white shadow-sm h-100">
-                        <h5 class="fw-bold text-primary mb-3">Jeck Sully</h5>
+                        <h5 class="text-primary fw-bold mb-3">Jeck Sully</h5>
                         <p class="text-secondary fst-italic">
-                            “The Jeep Tracking package at Mount Batur was incredible. The rugged paths, scenic trails, and then unwinding in the hot springs—pure perfection. A blend of adrenaline and relaxation I’ll always treasure!”
+                            “The Gunung Batur Jeep ride was incredible. Scenic trails plus volcanic landscapes, then hot springs—a perfect combo!”
                         </p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="testimonial-box p-4 bg-white shadow-sm h-100">
-                        <h5 class="fw-bold text-primary mb-3">Mandy Weberly</h5>
+                        <h5 class="text-primary fw-bold mb-3">Mandy Weberly</h5>
                         <p class="text-secondary fst-italic">
-                            “Jeep Tracking + Hot Spring was amazing. The Jeep ride was exhilarating, exploring rugged terrain, and the hot springs afterward felt like heaven. A perfect combination of adventure and calm.”
+                            “Jeep Tracking + Spa was pure bliss. Rugged paths first, then total relaxation. Highly recommended!”
                         </p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="testimonial-box p-4 bg-white shadow-sm h-100">
-                        <h5 class="fw-bold text-primary mb-3">Arabella Rodrigo</h5>
+                        <h5 class="text-primary fw-bold mb-3">Arabella Rodrigo</h5>
                         <p class="text-secondary fst-italic">
-                            “I loved every minute of the Jeep Tracking + Hot Spring package. The dramatic landscapes and then soaking in mineral-rich waters was unforgettable. It’s the perfect memory of Bali’s diverse beauty.”
+                            “Loved the Jeep + Hot Spring package. After dusty trails, soaking in warm waters was unforgettable.”
                         </p>
                     </div>
                 </div>
@@ -271,53 +393,114 @@
         </section>
 
         <!-- Call to Action Section -->
-        <section class="text-center mb-5" aria-labelledby="cta-title">
-            <h2 id="cta-title" class="section-heading text-primary fw-bold mb-4">Ready to Hit the Trails?</h2>
+        <section class="text-center mb-5">
+            <h2 class="text-primary fw-bold mb-4" style="font-weight:900;">Ready to Hit the Trails?</h2>
             <p class="mb-4 fs-5 text-muted">
-                Book now and pay upon arrival. Let us guide you through Bali’s hidden paths and volcanic marvels, creating a story of adrenaline, awe, and rejuvenation.
+                Secure your Jeep adventure now and pay upon arrival. Embrace Bali’s hidden routes and cap off your journey in comfort and style.
             </p>
-            <a href="https://api.whatsapp.com/send/?phone=628123925805&text&type=phone_number&app_absent=0"
+            <a href="https://api.whatsapp.com/send/?phone=628123925805&text=Hello,+I%27m+interested+in+booking+a+Jeep+adventure"
                class="btn btn-danger btn-lg me-3 mb-3 rounded-pill px-4 py-2 btn-book"
-               title="Book your Jeep adventure via WhatsApp"
-               aria-label="Book your Jeep adventure on WhatsApp">
-               Book Now
+               title="Arrange your Jeep tour via WhatsApp"
+               aria-label="Arrange your Jeep tour on WhatsApp">
+               Arrange Your Jeep Tour Today
             </a>
             <a href="contact.html"
                class="btn btn-outline-primary btn-lg mb-3 rounded-pill px-4 py-2"
-               title="Contact us for inquiries and more details"
+               title="Contact us for inquiries"
                aria-label="Contact us for more details">
-               Contact Us
+               Get In Touch
             </a>
         </section>
     </main>
 
+ 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-5" aria-label="Site Footer">
+    <footer class="bg-dark text-white py-5" aria-label="Site Footer">
         <div class="container">
-            <p class="mb-1 fw-bold">Bali Transport</p>
-            <p class="mb-1">Phone / WhatsApp:
-                <a href="tel:+628123925805" class="text-white text-decoration-underline" title="Call or WhatsApp Bali Transport">+62 8123 92 5805</a>
-            </p>
-            <p class="mb-3">Email:
-                <a href="mailto:gedebalitour007@gmail.com" class="text-white text-decoration-underline" title="Email Bali Transport">gedebalitour007@gmail.com</a>
-            </p>
-            
-            <div class="mb-3">
-                <a href="https://www.facebook.com/TRANSBALINOW"
-                   class="text-white mx-2 text-decoration-none social-link"
-                   title="Follow us on Facebook"
-                   aria-label="Facebook link">Facebook</a>
-                <a href="https://www.instagram.com/transbali_activity/"
-                   class="text-white mx-2 text-decoration-none social-link"
-                   title="Follow us on Instagram"
-                   aria-label="Instagram link">Instagram</a>
-            </div>
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-md-6 mb-4 text-center">
+                    <h5 class="fw-semibold mb-3">Bali Transport</h5>
+                  
+                    <p class="mb-2"><strong>Phone / WhatsApp:</strong> 
+                        <a href="tel:+628123925805" class="text-white text-decoration-underline" title="Call or WhatsApp Bali Transport">+62 8123 92 5805</a>
+                    </p>
+                    <p class="mb-2"><strong>Email:</strong> 
+                        <a href="mailto:gedebalitour007@gmail.com" class="text-white text-decoration-underline" title="Email Bali Transport">gedebalitour007@gmail.com</a>
+                    </p>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-md-6 mb-4 text-center">
+                    <h5 class="fw-semibold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none" title="Home">Home</a></li>
+                        <li><a href="services-airport.html" class="text-white text-decoration-none" title="Airport Travel">Airport Travel</a></li>
+                        <li><a href="Jeep.html" class="text-white text-decoration-none" title="Jeep Tracking">Jeep Tracking</a></li>
+                        <li><a href="about.html" class="text-white text-decoration-none" title="About Us">About Us</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none" title="Contact Us">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Social Media -->
+                <div class="col-md-12 mb-4">
+                    <h5 class="fw-semibold text-center mb-3">Follow Us</h5>
+                    <div class="d-flex justify-content-center">
+                        <a href="https://www.facebook.com/TRANSBALINOW" 
+                           class="btn btn-outline-primary me-2 mb-2" 
+                           target="_blank" 
+                           title="Follow Bali Transport on Facebook" 
+                           aria-label="Follow us on Facebook">
+                            <i class="fab fa-facebook-f me-1"></i> Facebook
+                        </a>
+                        <a href="https://www.instagram.com/transbali_activity/" 
+                           class="btn btn-outline-danger me-2 mb-2" 
+                           target="_blank" 
+                           title="Follow Bali Transport on Instagram" 
+                           aria-label="Follow us on Instagram">
+                            <i class="fab fa-instagram me-1"></i> Instagram
+                        </a>
+                        <a href="https://www.tripadvisor.co.id/Attraction_Review-g297696-d13271730-Reviews-Gede_Bali_Tour-Jimbaran_South_Kuta_Bali.html" 
+                           class="btn btn-outline-success me-2 mb-2 d-none d-md-flex" 
+                           target="_blank" 
+                           title="Read our reviews on TripAdvisor" 
+                           aria-label="Read our reviews on TripAdvisor">
+                            <i class="fab fa-tripadvisor me-1"></i> TripAdvisor
+                        </a>
+                        <a href="https://maps.app.goo.gl/KCKmfakCv1j1XM646" 
+                           class="btn btn-outline-warning me-2 mb-2 d-none d-md-flex" 
+                           target="_blank" 
+                           title="View our Google Business Profile" 
+                           aria-label="View our Google Business Profile">
+                            <i class="fab fa-google me-1"></i> Google
+                        </a>
+                    </div>
+<div class="col-12 d-flex justify-content-center align-items-center d-md-none">
+     <a href="https://maps.app.goo.gl/KCKmfakCv1j1XM646" 
+                           class="btn btn-outline-warning me-2 mb-2 d-flex d-md-none" 
+                           target="_blank" 
+                           title="View our Google Business Profile" 
+                           aria-label="View our Google Business Profile">
+                            <i class="fab fa-google me-1"></i> Google
+                        </a>
+   <a href="https://www.tripadvisor.co.id/Attraction_Review-g297696-d13271730-Reviews-Gede_Bali_Tour-Jimbaran_South_Kuta_Bali.html" 
+                           class="btn btn-outline-success me-2 mb-2 d-flex d-md-none" 
+                           target="_blank" 
+                           title="Read our reviews on TripAdvisor" 
+                           aria-label="Read our reviews on TripAdvisor">
+                            <i class="fab fa-tripadvisor me-1"></i> TripAdvisor
+                        </a>
 
-            <p class="mb-0 text-muted">&copy; 2024 BaliTransport.net. All rights reserved.</p>
+</div>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <a href="https://cleandesignuk.com" class="text-white text-decoration-none" title="Website design by Clean Design UK" aria-label="Visit Clean Design UK website">
+                <p class="text-center mt-4 mb-0">Website by Clean Design UK</p> </a>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
+
+    <!-- Bootstrap & Font Awesome JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </body>
 </html>

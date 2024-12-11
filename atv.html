@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
@@ -8,43 +8,219 @@
     <meta name="author" content="BaliTransport.net"/>
     <title>ATV Tour Packages | BaliTransport.net</title>
 
-    <!-- Google Font -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Using Playfair Display for headings and Poppins for body -->
+    <!-- Playfair Display for headings and Poppins for body -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"/>
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="atv.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+
+        .brand-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            height: 100vh;
+            background: url('images/atv2.webp') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            padding: 2rem;
+            position: relative;
+        }
+
+        .hero-content {
+            background: rgba(0,0,0,0.5);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero-content .display-3 {
+            font-size: 2.5rem;
+        }
+
+        .hero-content .lead {
+            font-size: 1.25rem;
+        }
+
+        .hero-btn {
+            font-weight: 600;
+            border-radius: 2rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .hero-btn:hover {
+            background-color: #ffc107;
+            transform: translateY(-3px);
+        }
+
+        /* Shape Dividers */
+        .shape-divider-bottom svg,
+        .shape-divider-top-bottom svg {
+            display: block;
+            width: 100%;
+            height: 120px;
+        }
+
+        /* Package Cards */
+        .package-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        }
+
+        .btn-book {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn-book:hover {
+            background-color: #1E63CE !important;
+            transform: scale(1.05);
+        }
+
+        /* Testimonials */
+        .testimonial-box {
+            border-radius: 0.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background-color: #212529;
+            color: #fff;
+            font-size: 0.95rem;
+        }
+
+        footer a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #0dcaf0;
+            text-decoration: underline;
+        }
+
+        /* WhatsApp Floating Icon */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 4px 4px 20px rgba(0,0,0,0.4);
+        }
+
+        .whatsapp-float img {
+            width: 30px;
+            height: 30px;
+        }
+
+        @media (max-width: 992px) {
+            .hero-content .display-3 {
+                font-size: 2rem;
+            }
+            .hero-section {
+                height: 100vh;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-section {
+                height: auto;
+                padding: 4rem 1rem;
+            }
+            .hero-content .display-3 {
+                font-size: 1.75rem;
+            }
+            .hero-content .lead {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-     <!-- Skip to main content link for accessibility -->
+    <!-- Skip to main content link for accessibility -->
     <a class="visually-hidden-focusable skip-link" href="#main-content" aria-label="Skip to main content">Skip to main content</a>
 
-    <!-- Modern Bootstrap Navbar -->
-    <header class="header bg-white shadow-sm">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white" aria-label="Main navigation">
+    <!-- Floating WhatsApp Icon -->
+    <a href="https://api.whatsapp.com/send/?phone=628123925805&text=Hello%20BaliTransport.net,%20I%20would%20like%20to%20learn%20more%20about%20your%20services."
+       class="whatsapp-float"
+       target="_blank"
+       title="Chat with us on WhatsApp"
+       aria-label="Chat with us on WhatsApp">
+        <img src="images/icons8-whatsapp-50.png" alt="WhatsApp Chat Icon" />
+    </a>
+
+    <!-- Header / Sticky Navbar -->
+    <header class="header sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" aria-label="Main navigation of BaliTransport.net">
             <div class="container">
-                <!-- Brand -->
-                <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="index.html"
-                   title="Go to BaliTransport.net homepage" aria-label="BaliTransport.net homepage">
-                    <span class="fs-4 brand-title">BaliTransport<span class="text-danger">.net</span></span>
+                <a class="navbar-brand text-primary d-flex align-items-center fw-bold" href="index.html"
+                   title="Go to BaliTransport.net homepage" aria-label="BaliTransport.net homepage link">
+                   <span class="fs-4 brand-title">BaliTransport<span class="text-danger">.net</span></span>
                 </a>
-                <!-- Toggler/collapsibe Button -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-                        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarContent" aria-controls="navbarContent"
+                        aria-expanded="false" aria-label="Toggle navigation menu">
+                  <span class="navbar-toggler-icon"></span>
                 </button>
-                <!-- Navbar Links -->
+                
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <!-- Home -->
-                        <li class="nav-item">
-                            <a class="nav-link text-secondary" href="index.html" title="Home">Home</a>
-                        </li>
-                        <!-- Blog Dropdown -->
+                        <li class="nav-item"><a class="nav-link text-secondary" href="index.html" title="Home">Home</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-secondary" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Blog">
                                 Blog
@@ -53,10 +229,8 @@
                                 <li><a class="dropdown-item" href="bali-swim.html" title="Best beaches to swim Bali">Best Beaches to Swim Bali</a></li>
                                 <li><a class="dropdown-item" href="best-month-bali.html" title="Best month to visit Bali">Best Month to Visit Bali</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                
                             </ul>
                         </li>
-                        <!-- Services Dropdown -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-secondary" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Services">
                                 Services
@@ -69,54 +243,34 @@
                                 <li><a class="dropdown-item" href="Atv.html" title="ATV Tours">ATV Tours</a></li>
                                 <li><a class="dropdown-item" href="Baliwatersport.html" title="Water Sports">Water Sports</a></li>
                                 <li><a class="dropdown-item" href="Raft-trek.html" title="Rafting & Trekking">Rafting & Trekking</a></li>
+                                <li><a class="dropdown-item" href="golf.html" title="Golf">Golf</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                
                             </ul>
                         </li>
-                        <!-- Vehicle Rentals -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-secondary" href="#" id="vehicleDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Vehicle Rentals">
-                                Vehicle Rentals
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="vehicleDropdown">
-                                <li><a class="dropdown-item" href="vehicle-rentals.html" title="All Vehicle Rentals">All Vehicles</a></li>
-                                <li><a class="dropdown-item" href="jeep.html" title="Jeep Rentals">Jeep Rentals</a></li>
-                                <li><a class="dropdown-item" href="atv.html" title="ATV Rentals">ATV Rentals</a></li>
-                                <li><a class="dropdown-item" href="swing.html" title="Swing Rentals">Swing Rentals</a></li>
-                                <!-- Add more vehicle rental options as needed -->
-                            </ul>
-                        </li>
-                        <!-- Gallery -->
-                        <li class="nav-item">
-                            <a class="nav-link text-secondary" href="gallery.html" title="Gallery">Gallery</a>
-                        </li>
-                        <!-- About -->
-                        <li class="nav-item">
-                            <a class="nav-link text-secondary" href="about.html" title="About Us">About</a>
-                        </li>
-                        <!-- Contact -->
-                        <li class="nav-item">
-                            <a class="nav-link text-secondary" href="contact.html" title="Contact Us">Contact Us</a>
-                        </li>
+                        
+                        <li class="nav-item"><a class="nav-link text-secondary" href="gallery.html" title="Gallery">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link text-secondary" href="about.html" title="About Us">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-secondary" href="contact.html" title="Contact Us">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section with Parallax Background -->
-    <section class="hero-section text-white text-center d-flex align-items-center mx-auto" style="max-width:1300px" aria-label="ATV Adventures hero banner">
+    <!-- Hero Section -->
+    <section class="hero-section">
         <div class="container position-relative">
             <div class="hero-content">
-                <h1 class="display-3 fw-bold mb-3 hero-title">Bali ATV Adventures</h1>
-                <p class="lead mb-4 hero-subtitle">Conquer lush jungles, uncover hidden waterfalls, and embrace thrilling combos like ATV + Rafting or ATV + Horse Riding. Experience Bali like never before.</p>
+                <h1 class="display-3 fw-bold mb-3">Bali ATV Adventures</h1>
+                <p class="lead mb-4">Conquer lush jungles, uncover hidden waterfalls, and embrace thrilling combos like ATV + Rafting or ATV + Horse Riding. Experience Bali like never before.</p>
                 <a href="#main-content" class="btn btn-warning btn-lg hero-btn" 
-                   title="Scroll down to view ATV packages and details" aria-label="View ATV tour details">
+                   title="View ATV packages and details" aria-label="Explore ATV tour packages">
                    Discover Our ATV Tours
                 </a>
             </div>
         </div>
     </section>
+
     <!-- Shape Divider -->
     <div class="shape-divider-bottom">
         <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
@@ -125,59 +279,57 @@
     </div>
 
     <main id="main-content" class="container py-5" aria-label="Main content area">
-        <!-- About ATV Section -->
+        <!-- About ATV Tours -->
         <section class="mb-5" aria-labelledby="about-atv-title">
-            <h2 id="about-atv-title" class="section-heading text-center mb-4 fw-bold text-primary">About Our ATV Tours</h2>
+            <h2 id="about-atv-title" class="text-center mb-4 text-primary" style="font-weight:900;">About Our ATV Tours</h2>
             <p class="fs-5 text-muted">
-                ATV (All-Terrain Vehicle) riding is more than just a sport—it's an immersive journey through Bali's vibrant ecosystems. Feel the rush as you carve through dense jungles, muddy tracks, and rolling rice terraces. Our expert guides ensure your safety and comfort, so you can unleash your inner adventurer and discover hidden gems off the beaten path.
+                ATV (All-Terrain Vehicle) riding is more than just a sport—it’s an immersive journey through Bali’s vibrant ecosystems. Feel the rush as you carve through dense jungles, muddy tracks, and rolling rice terraces. Our expert guides ensure your safety and comfort, so you can unleash your inner adventurer and discover hidden gems off the beaten path.
             </p>
             <p class="fs-5 text-muted mb-4">
                 Ideal for all experience levels, our tours combine adrenaline and awe-inspiring scenery. Respect the environment, follow our safety guidelines, and prepare to craft stories you'll share for years to come.
             </p>
         </section>
 
-        <!-- Packages Section -->
+        <!-- ATV Tour Packages -->
         <section class="mb-5" aria-labelledby="packages-title">
-            <h2 id="packages-title" class="section-heading text-center mb-4 fw-bold text-primary">ATV Tour Packages</h2>
+            <h2 id="packages-title" class="text-center mb-4 text-primary" style="font-weight:900;">ATV Tour Packages</h2>
             <p class="text-center text-muted mb-5 fs-5">From stand-alone ATV rides to exhilarating combos, choose your perfect adventure and embrace Bali’s natural allure.</p>
 
             <div class="row g-4">
                 <!-- ATV + Rafting -->
                 <div class="col-md-6">
                     <div class="card h-100 shadow-sm package-card">
-                        <img src="images/atv1.webp" class="card-img-top" 
-                             alt="Group enjoying ATV and rafting activities" 
-                             title="Combine ATV riding and rafting for a double dose of adrenaline">
+                        <img src="images/atv1.webp" class="card-img-top" style="height:270px;object-fit:cover;"
+                             alt="ATV and Rafting Combo" title="ATV + Rafting Combo">
                         <div class="card-body">
-                            <h5 class="card-title fw-bold text-primary">ATV + Rafting Combo</h5>
-                            <p class="card-text text-muted fs-6">
+                            <h5 class="fw-bold text-primary">ATV + Rafting Combo</h5>
+                            <p class="text-muted fs-6">
                                 Begin with a high-speed ATV ride through challenging terrains, then trade wheels for a raft, navigating white-water rapids in the heart of Bali. This combo promises a full day of thrills, teamwork, and nature’s wonders.
                             </p>
-                            <a href="https://api.whatsapp.com/send/?phone=628123925805&text&type=phone_number&app_absent=0" 
+                            <a href="https://api.whatsapp.com/send/?phone=628123925805&text=Hello,+I+want+to+book+the+ATV+%2B+Rafting+Combo"
                                class="btn btn-primary rounded-pill px-4 py-2 mt-2 btn-book"
-                               title="Book the ATV + Rafting Combo via WhatsApp"
-                               aria-label="Book ATV and rafting combo on WhatsApp">
+                               title="Book ATV + Rafting Combo on WhatsApp"
+                               aria-label="Reserve ATV + Rafting Combo now">
                                Book ATV + Rafting
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- ATV + Horse Riding -->
                 <div class="col-md-6">
                     <div class="card h-100 shadow-sm package-card">
-                        <img src="images/atv3.webp" class="card-img-top" 
-                             alt="ATV and horse riding along scenic Bali trails" 
-                             title="Combine ATV riding with horse riding for a balanced adventure">
+                        <img src="images/atv3.webp" class="card-img-top" style="height:270px;object-fit:cover;"
+                             alt="ATV and Horse Riding Combo" title="ATV + Horse Riding Combo">
                         <div class="card-body">
-                            <h5 class="card-title fw-bold text-primary">ATV + Horse Riding</h5>
-                            <p class="card-text text-muted fs-6">
+                            <h5 class="fw-bold text-primary">ATV + Horse Riding</h5>
+                            <p class="text-muted fs-6">
                                 Pair the exhilarating rush of ATV riding with the gentle stride of a horseback journey. Experience Bali’s natural beauty from two perspectives—charge through rugged paths, then roam tranquil fields and forests, all in one transformative adventure.
                             </p>
-                            <a href="https://api.whatsapp.com/send/?phone=628123925805&text&type=phone_number&app_absent=0" 
+                            <a href="https://api.whatsapp.com/send/?phone=628123925805&text=Hello,+I+am+interested+in+the+ATV+%2B+Horse+Riding+Package"
                                class="btn btn-primary rounded-pill px-4 py-2 mt-2 btn-book"
-                               title="Book the ATV + Horse Riding package via WhatsApp"
-                               aria-label="Book ATV and horse riding combo on WhatsApp">
+                               title="Book ATV + Horse Riding Package on WhatsApp"
+                               aria-label="Reserve ATV + Horse Riding Package now">
                                Book ATV + Horse Riding
                             </a>
                         </div>
@@ -186,17 +338,17 @@
             </div>
 
             <!-- Additional Packages Mention -->
-            <div class="mt-5 text-center fs-5">
-                <p class="text-muted">Looking for even more variety?</p>
-                <ul class="list-unstyled mb-4">
+            <div class="mt-5 text-center fs-5 text-muted">
+                <p>Looking for even more variety?</p>
+                <ul class="list-unstyled">
                     <li><strong>ATV + Rafting + Swing:</strong> Add a heart-stopping swing above lush valleys for a triple thrill.</li>
                     <li><strong>ATV + Cycling:</strong> Balance off-road adrenaline with a peaceful cycling journey through hidden backroads.</li>
                 </ul>
                 <p class="mt-3">
-                    <a href="https://api.whatsapp.com/send/?phone=628123925805&text&type=phone_number&app_absent=0" 
+                    <a href="https://api.whatsapp.com/send/?phone=628123925805&text=Hello,+I'd+like+to+customize+my+ATV+experience"
                        class="btn btn-success rounded-pill px-4 py-2"
                        title="Contact us via WhatsApp for custom packages"
-                       aria-label="Contact us via WhatsApp for custom or additional ATV packages">
+                       aria-label="Customize your ATV adventure now">
                        Customize Your Package
                     </a>
                 </p>
@@ -210,34 +362,34 @@
             </svg>
         </div>
 
-        <!-- Scenic Highlights Section -->
-        <section class="py-5 bg-light" aria-labelledby="scenic-title">
-            <h2 id="scenic-title" class="section-heading text-center mb-4 fw-bold text-primary">Bali’s Scenic Highlights</h2>
+        <!-- Scenic Highlights -->
+        <section class="py-5 bg-light" aria-labelledby="scenic-highlights-title">
+            <h2 id="scenic-highlights-title" class="text-center mb-4 text-primary" style="font-weight:900;">Bali’s Scenic Highlights</h2>
             <p class="fs-5 text-muted mb-4 text-center px-lg-5">
                 Our ATV tours unlock a secret Bali—one of whispering jungles, cascading waterfalls, and timeless rice terraces. Feel the mist on your face as you ride past hidden streams, gaze upon emerald canopies that house vibrant wildlife, and admire centuries-old terraces that shape the island’s storied culture. Each ride unfolds like a chapter in a grand adventure.
             </p>
         </section>
 
-        <!-- Why Choose Us Section -->
+        <!-- Why Choose Us -->
         <section class="mb-5" aria-labelledby="why-us-title">
-            <h2 id="why-us-title" class="section-heading text-center mb-4 fw-bold text-primary">Why Choose BaliTransport.net?</h2>
+            <h2 id="why-us-title" class="text-center mb-4 text-primary" style="font-weight:900;">Why Choose BaliTransport.net?</h2>
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <ul class="list-unstyled fs-5 text-muted">
                         <li class="mb-3 d-flex align-items-start">
-                            <i class="bi bi-shield-check text-primary fs-4 me-3" aria-hidden="true"></i>
+                            <i class="fa-solid fa-shield-halved text-primary fs-4 me-3" aria-hidden="true"></i>
                             <span><strong>Professional Guidance:</strong> Trained guides ensure top-notch safety and maximize your excitement.</span>
                         </li>
                         <li class="mb-3 d-flex align-items-start">
-                            <i class="bi bi-compass text-primary fs-4 me-3" aria-hidden="true"></i>
+                            <i class="fa-solid fa-compass text-primary fs-4 me-3" aria-hidden="true"></i>
                             <span><strong>Customizable Options:</strong> Tailor your tour for any skill level—novice or seasoned pro—and chart your own adventure.</span>
                         </li>
                         <li class="mb-3 d-flex align-items-start">
-                            <i class="bi bi-gem text-primary fs-4 me-3" aria-hidden="true"></i>
+                            <i class="fa-solid fa-gem text-primary fs-4 me-3" aria-hidden="true"></i>
                             <span><strong>Unique Access:</strong> Go beyond tourist trails and discover hidden Bali, rich in natural and cultural treasures.</span>
                         </li>
                         <li class="mb-3 d-flex align-items-start">
-                            <i class="bi bi-tools text-primary fs-4 me-3" aria-hidden="true"></i>
+                            <i class="fa-solid fa-toolbox text-primary fs-4 me-3" aria-hidden="true"></i>
                             <span><strong>Quality & Comfort:</strong> Well-maintained ATVs, quality gear, and attentive support ensure a smooth, safe, and thrilling experience.</span>
                         </li>
                     </ul>
@@ -245,9 +397,9 @@
             </div>
         </section>
 
-        <!-- Testimonials Section -->
+        <!-- Testimonials -->
         <section class="py-5 bg-light" aria-labelledby="testimonials-title">
-            <h2 id="testimonials-title" class="section-heading text-center mb-5 fw-bold text-primary">What Our Guests Say</h2>
+            <h2 id="testimonials-title" class="text-center mb-5 text-primary" style="font-weight:900;">What Our Guests Say</h2>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="testimonial-box p-4 bg-white shadow-sm h-100">
@@ -276,21 +428,21 @@
             </div>
         </section>
 
-        <!-- Call to Action Section -->
+        <!-- Call to Action -->
         <section class="text-center mb-5" aria-labelledby="cta-title">
-            <h2 id="cta-title" class="section-heading text-primary fw-bold mb-4">Ready to Begin?</h2>
+            <h2 id="cta-title" class="text-primary fw-bold mb-4" style="font-weight:900;">Ready to Begin?</h2>
             <p class="mb-4 fs-5 text-muted">
                 Reserve now and pay upon arrival. Our dedicated team is eager to unveil Bali’s wonders, one exhilarating ride at a time.
             </p>
-            <a href="https://api.whatsapp.com/send/?phone=628123925805&text&type=phone_number&app_absent=0" 
+            <a href="https://api.whatsapp.com/send/?phone=628123925805&text=Hello,+I+am+ready+to+book+an+ATV+adventure"
                class="btn btn-danger btn-lg me-3 mb-3 rounded-pill px-4 py-2 btn-book"
                title="Book your ATV adventure via WhatsApp"
-               aria-label="Book your ATV adventure on WhatsApp">
+               aria-label="Arrange your ATV adventure now on WhatsApp">
                Book Now
             </a>
-            <a href="contact.html" 
+            <a href="contact.html"
                class="btn btn-outline-primary btn-lg mb-3 rounded-pill px-4 py-2"
-               title="Contact us for inquiries and more details"
+               title="Contact us for inquiries"
                aria-label="Contact us for more details">
                Contact Us
             </a>
@@ -301,29 +453,38 @@
     <footer class="bg-dark text-white text-center py-5" aria-label="Site Footer">
         <div class="container">
             <p class="mb-1 fw-bold">Bali Transport</p>
-            <p class="mb-1">Phone / WhatsApp: 
+            <p class="mb-1">Phone / WhatsApp:
                 <a href="tel:+628123925805" class="text-white text-decoration-underline" title="Call or WhatsApp Bali Transport">+62 8123 92 5805</a>
             </p>
-            <p class="mb-3">Email: 
+            <p class="mb-3">Email:
                 <a href="mailto:gedebalitour007@gmail.com" class="text-white text-decoration-underline" title="Email Bali Transport">gedebalitour007@gmail.com</a>
             </p>
             
             <div class="mb-3">
-                <a href="https://www.facebook.com/TRANSBALINOW" 
-                   class="text-white mx-2 text-decoration-none social-link" 
-                   title="Follow us on Facebook" 
+                <a href="https://www.facebook.com/TRANSBALINOW"
+                   class="text-white mx-2 text-decoration-none social-link"
+                   title="Follow us on Facebook"
                    aria-label="Facebook link">Facebook</a>
-                <a href="https://www.instagram.com/transbali_activity/" 
-                   class="text-white mx-2 text-decoration-none social-link" 
-                   title="Follow us on Instagram" 
+                <a href="https://www.instagram.com/transbali_activity/"
+                   class="text-white mx-2 text-decoration-none social-link"
+                   title="Follow us on Instagram"
                    aria-label="Instagram link">Instagram</a>
+                <a href="https://www.tripadvisor.co.id/Attraction_Review-g297696-d13271730-Reviews-Gede_Bali_Tour-Jimbaran_South_Kuta_Bali.html"
+                   class="text-white mx-2 text-decoration-none social-link"
+                   title="Read our TripAdvisor reviews"
+                   aria-label="TripAdvisor link">TripAdvisor</a>
+                <a href="https://maps.app.goo.gl/KCKmfakCv1j1XM646"
+                   class="text-white mx-2 text-decoration-none social-link"
+                   title="View our Google Business Profile"
+                   aria-label="Google Business Profile link">Google Profile</a>
             </div>
 
             <p class="mb-0 text-muted">&copy; 2024 BaliTransport.net. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap & Font Awesome JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </body>
 </html>

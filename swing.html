@@ -11,70 +11,260 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Using Playfair Display for headings and Poppins for body -->
+    <!-- Playfair Display for headings and Poppins for body -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="swing.css"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+
+        .brand-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            height: 100vh;
+            background: url('images/swing-3.webp') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            padding: 2rem;
+            position: relative;
+        }
+
+        .hero-content {
+            background: rgba(0,0,0,0.5);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero-content .display-3 {
+            font-size: 2.5rem;
+        }
+
+        .hero-content .lead {
+            font-size: 1.25rem;
+        }
+
+        .hero-btn {
+            font-weight: 600;
+            border-radius: 2rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .hero-btn:hover {
+            background-color: #ffc107;
+            transform: translateY(-3px);
+        }
+
+        /* Shape Dividers */
+        .shape-divider-bottom svg,
+        .shape-divider-top-bottom svg {
+            display: block;
+            width: 100%;
+            height: 120px;
+        }
+
+        /* Package Cards */
+        .package-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        }
+
+        .btn-book {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn-book:hover {
+            background-color: #1E63CE !important;
+            transform: scale(1.05);
+        }
+
+        /* Testimonials */
+        .testimonial-box {
+            border-radius: 0.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background-color: #212529;
+            color: #fff;
+            font-size: 0.95rem;
+        }
+
+        footer a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #0dcaf0;
+            text-decoration: underline;
+        }
+
+        /* WhatsApp Floating Icon */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 4px 4px 20px rgba(0,0,0,0.4);
+        }
+
+        .whatsapp-float img {
+            width: 30px;
+            height: 30px;
+        }
+
+        @media (max-width: 992px) {
+            .hero-content .display-3 {
+                font-size: 2rem;
+            }
+            .hero-section {
+                height: 100vh;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-section {
+                height: auto;
+                padding: 4rem 1rem;
+            }
+            .hero-content .display-3 {
+                font-size: 1.75rem;
+            }
+            .hero-content .lead {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Skip to Content Link for Accessibility -->
+    <!-- Skip to main content link for accessibility -->
     <a class="visually-hidden-focusable skip-link" href="#main-content" aria-label="Skip to main content">Skip to main content</a>
 
-    <!-- Header / Navigation -->
-    <header class="header bg-white shadow-sm">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white" aria-label="Main navigation">
+    <!-- Floating WhatsApp Icon -->
+    <a href="https://api.whatsapp.com/send/?phone=628123925805&text=Hello%20BaliTransport.net,%20I%20would%20like%20to%20learn%20more%20about%20your%20services."
+       class="whatsapp-float"
+       target="_blank"
+       title="Chat with us on WhatsApp"
+       aria-label="Chat with us on WhatsApp">
+        <img src="images/icons8-whatsapp-50.png" alt="WhatsApp Chat Icon" />
+    </a>
+
+    <!-- Header / Sticky Navbar -->
+    <header class="header sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" aria-label="Main navigation of BaliTransport.net">
             <div class="container">
-                <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="index.html"
-                   title="Go to BaliTransport.net homepage" aria-label="BaliTransport.net homepage">
-                    <span class="fs-4 brand-title">BaliTransport<span class="text-danger">.net</span></span>
+                <a class="navbar-brand text-primary d-flex align-items-center fw-bold" href="index.html"
+                   title="Go to BaliTransport.net homepage" aria-label="BaliTransport.net homepage link">
+                   <span class="fs-4 brand-title">BaliTransport<span class="text-danger">.net</span></span>
                 </a>
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation menu">
-                    <span class="navbar-toggler-icon" aria-hidden="true"></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarContent" aria-controls="navbarContent"
+                        aria-expanded="false" aria-label="Toggle navigation menu">
+                  <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav text-uppercase fw-semibold">
-                        <li class="nav-item mx-2">
-                            <a class="nav-link text-secondary" href="index.html"
-                               title="Visit BaliTransport.net Home" aria-label="Home page link">Home</a>
+                
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link text-secondary" href="index.html" title="Home">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-secondary" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Blog">
+                                Blog
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+                                <li><a class="dropdown-item" href="bali-swim.html" title="Best beaches to swim Bali">Best Beaches to Swim Bali</a></li>
+                                <li><a class="dropdown-item" href="best-month-bali.html" title="Best month to visit Bali">Best Month to Visit Bali</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                            </ul>
                         </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link text-secondary" href="tour-package.html"
-                               title="Explore all tour packages" aria-label="Tour packages page link">Tour Package</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-secondary" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Services">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" href="services-airport.html" title="Airport Travel">Airport Travel</a></li>
+                                <li><a class="dropdown-item" href="Jeep.html" title="Jeep Tracking">Jeep Tracking</a></li>
+                                <li><a class="dropdown-item" href="cycling-horse.html" title="Cycling & Horse Riding">Cycling & Horse Riding</a></li>
+                                <li><a class="dropdown-item" href="Swing.html" title="Swing Adventures">Swing Adventures</a></li>
+                                <li><a class="dropdown-item" href="Atv.html" title="ATV Tours">ATV Tours</a></li>
+                                <li><a class="dropdown-item" href="Baliwatersport.html" title="Water Sports">Water Sports</a></li>
+                                <li><a class="dropdown-item" href="Raft-trek.html" title="Rafting & Trekking">Rafting & Trekking</a></li>
+                                <li><a class="dropdown-item" href="golf.html" title="Golf">Golf</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                            </ul>
                         </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link text-secondary" href="about.html"
-                               title="Learn about our company" aria-label="About page link">About</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link text-secondary" href="contact.html"
-                               title="Contact us directly" aria-label="Contact page link">Contact Us</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link text-secondary" href="gallery.html"
-                               title="View our image gallery" aria-label="Gallery page link">Gallery</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link text-secondary" href="news-articles.html"
-                               title="Read news & articles" aria-label="News & articles page link">News & Articles</a>
-                        </li>
+                        
+                        <li class="nav-item"><a class="nav-link text-secondary" href="gallery.html" title="Gallery">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link text-secondary" href="about.html" title="About Us">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-secondary" href="contact.html" title="Contact Us">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section with Parallax Background -->
-    <section class="hero-section text-white text-center d-flex align-items-center" aria-label="Bali Swing Adventures hero banner">
+    <!-- Hero Section -->
+    <section class="hero-section">
         <div class="container position-relative">
             <div class="hero-content">
-                <h1 class="display-3 fw-bold mb-3 hero-title">Bali Swing Adventures</h1>
-                <p class="lead mb-4 hero-subtitle">Soar over lush jungles, glide above emerald rice terraces, and capture breathtaking views as you swing into Bali's vibrant landscapes.</p>
+                <h1 class="display-3 fw-bold mb-3">Bali Swing Adventures</h1>
+                <p class="lead mb-4">Soar over lush jungles, glide above emerald rice terraces, and capture breathtaking views as you swing into Bali’s vibrant landscapes.</p>
                 <a href="#main-content" class="btn btn-warning btn-lg hero-btn"
-                   title="Scroll down to view Bali swing packages and details" aria-label="View swing packages and details">
+                   title="View Bali swing packages and details" aria-label="Explore swing packages">
                    Discover Our Swing Experiences
                 </a>
             </div>
@@ -89,9 +279,9 @@
     </div>
 
     <main id="main-content" class="container py-5" aria-label="Main content area">
-        <!-- About Section -->
+        <!-- About Swings -->
         <section class="mb-5" aria-labelledby="about-swing-title">
-            <h2 id="about-swing-title" class="section-heading text-center mb-4 fw-bold text-primary">About Our Swings</h2>
+            <h2 id="about-swing-title" class="text-center mb-4 text-primary" style="font-weight:900;">About Our Swings</h2>
             <p class="fs-5 text-muted">
                 Bali’s iconic swings offer an enchanting blend of adrenaline and serenity. Suspended above jungles and terraces, these swings provide a unique vantage point to immerse yourself in nature’s beauty. Beginners and thrill-seekers alike will cherish the moment as they float effortlessly in the tropical breeze.
             </p>
@@ -100,27 +290,26 @@
             </p>
         </section>
 
-        <!-- Packages Section -->
+        <!-- Swing Packages -->
         <section class="mb-5" aria-labelledby="packages-title">
-            <h2 id="packages-title" class="section-heading text-center mb-4 fw-bold text-primary">Our Swing Packages</h2>
+            <h2 id="packages-title" class="text-center mb-4 text-primary" style="font-weight:900;">Our Swing Packages</h2>
             <p class="text-center text-muted mb-5 fs-5">From single swings to combined experiences, choose your perfect package to enjoy Bali’s panoramic splendor from above.</p>
 
             <div class="row g-4">
                 <!-- Jungle Swing -->
                 <div class="col-md-6">
                     <div class="card h-100 shadow-sm package-card">
-                        <img src="images/swing-1.webp" class="card-img-top"
-                             alt="A visitor soaring over a dense Bali jungle on a swing"
-                             title="Jungle Swing - Elevate your spirit above Bali’s lush rainforest">
+                        <img src="images/swing-1.webp" class="card-img-top" style="height:270px;object-fit:cover;"
+                             alt="Jungle Swing in Bali" title="Jungle Swing - Soar above lush jungles">
                         <div class="card-body">
-                            <h5 class="card-title fw-bold text-primary">Jungle Swing</h5>
-                            <p class="card-text text-muted fs-6">
+                            <h5 class="fw-bold text-primary">Jungle Swing</h5>
+                            <p class="text-muted fs-6">
                                 Glide above emerald jungles and listen to the whisper of leaves. Perfect for nature lovers seeking a peaceful thrill, the Jungle Swing offers front-row seats to Bali’s living tapestry.
                             </p>
-                            <a href="https://api.whatsapp.com/send/?phone=628123925805&text&type=phone_number&app_absent=0"
+                            <a href="https://api.whatsapp.com/send/?phone=628123925805&text=Hello,+I+want+to+book+the+Jungle+Swing+Package"
                                class="btn btn-primary rounded-pill px-4 py-2 mt-2 btn-book"
-                               title="Book the Jungle Swing package via WhatsApp"
-                               aria-label="Book Jungle Swing experience on WhatsApp">
+                               title="Book Jungle Swing Package on WhatsApp"
+                               aria-label="Reserve Jungle Swing Package now">
                                Book Jungle Swing
                             </a>
                         </div>
@@ -130,18 +319,17 @@
                 <!-- Rice Terrace Swing -->
                 <div class="col-md-6">
                     <div class="card h-100 shadow-sm package-card">
-                        <img src="images/swing-2.webp" class="card-img-top"
-                             alt="A swing overlooking Bali's iconic rice terraces"
-                             title="Rice Terrace Swing - Marvel at Bali’s cascading fields from a lofty perch">
+                        <img src="images/swing-2.webp" class="card-img-top" style="height:270px;object-fit:cover;"
+                             alt="Rice Terrace Swing" title="Rice Terrace Swing - Marvel at Bali’s terraces">
                         <div class="card-body">
-                            <h5 class="card-title fw-bold text-primary">Rice Terrace Swing</h5>
-                            <p class="card-text text-muted fs-6">
+                            <h5 class="fw-bold text-primary">Rice Terrace Swing</h5>
+                            <p class="text-muted fs-6">
                                 Hover over the island’s famed rice terraces. Embrace the gentle arc as you sail through the air, savoring panoramic views of a landscape shaped by centuries of tradition and culture.
                             </p>
-                            <a href="https://api.whatsapp.com/send/?phone=628123925805&text&type=phone_number&app_absent=0"
+                            <a href="https://api.whatsapp.com/send/?phone=628123925805&text=Hello,+I+am+interested+in+the+Rice+Terrace+Swing"
                                class="btn btn-primary rounded-pill px-4 py-2 mt-2 btn-book"
-                               title="Book the Rice Terrace Swing package via WhatsApp"
-                               aria-label="Book Rice Terrace Swing experience on WhatsApp">
+                               title="Book Rice Terrace Swing Package on WhatsApp"
+                               aria-label="Reserve Rice Terrace Swing Package now">
                                Book Rice Terrace Swing
                             </a>
                         </div>
@@ -149,18 +337,17 @@
                 </div>
             </div>
 
-            <!-- Additional Packages Mention -->
-            <div class="mt-5 text-center fs-5">
-                <p class="text-muted">Want to enhance your experience?</p>
-                <ul class="list-unstyled mb-4">
-                    <li><strong>Jungle + Waterfall Swing:</strong> Combine the thrill of soaring over lush greenery with a glimpse of cascading waterfalls.</li>
-                    <li><strong>Swing + ATV or Rafting:</strong> Elevate your day by pairing swings with adrenaline-packed ATV rides or rafting expeditions.</li>
+            <div class="mt-5 text-center fs-5 text-muted">
+                <p>Enhance your experience with combo packages:</p>
+                <ul class="list-unstyled">
+                    <li><strong>Jungle + Waterfall Swing:</strong> Pair lush greenery with the soothing sound of cascading waterfalls.</li>
+                    <li><strong>Swing + ATV or Rafting:</strong> Add adrenaline-fueled fun by combining swings with ATV rides or rafting.</li>
                 </ul>
                 <p class="mt-3">
-                    <a href="https://api.whatsapp.com/send/?phone=628123925805&text&type=phone_number&app_absent=0"
+                    <a href="https://api.whatsapp.com/send/?phone=628123925805&text=Hello,+I'd+like+to+customize+my+swing+experience"
                        class="btn btn-success rounded-pill px-4 py-2"
-                       title="Contact us via WhatsApp for custom swing packages"
-                       aria-label="Contact us for custom or additional swing packages">
+                       title="Contact us via WhatsApp for custom packages"
+                       aria-label="Customize your Bali swing adventure now">
                        Customize Your Adventure
                     </a>
                 </p>
@@ -174,34 +361,34 @@
             </svg>
         </div>
 
-        <!-- Scenic Highlights Section -->
+        <!-- Scenic Highlights -->
         <section class="py-5 bg-light" aria-labelledby="scenic-highlights-title">
-            <h2 id="scenic-highlights-title" class="section-heading text-center mb-4 fw-bold text-primary">Bali’s Scenic Highlights</h2>
+            <h2 id="scenic-highlights-title" class="text-center mb-4 text-primary" style="font-weight:900;">Bali’s Scenic Highlights</h2>
             <p class="fs-5 text-muted mb-4 text-center px-lg-5">
-                Each swing gives you a front-row view of Bali’s natural wonders—towering palms, shimmering fields, and secret waterfalls. Let the warm breeze envelop you as the horizon unfolds, painting a portrait of the island’s infinite charm.
+                Each swing presents a front-row view of Bali’s wonders—towering palms, shimmering terraces, and hidden waterfalls. Let the warm breeze surround you as the horizon unfolds, painting a portrait of the island’s infinite charm.
             </p>
         </section>
 
-        <!-- Why Choose Us Section -->
+        <!-- Why Choose Us -->
         <section class="mb-5" aria-labelledby="why-us-title">
-            <h2 id="why-us-title" class="section-heading text-center mb-4 fw-bold text-primary">Why Choose BaliTransport.net?</h2>
+            <h2 id="why-us-title" class="text-center mb-4 text-primary" style="font-weight:900;">Why Choose BaliTransport.net?</h2>
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <ul class="list-unstyled fs-5 text-muted">
                         <li class="mb-3 d-flex align-items-start">
-                            <i class="bi bi-shield-check text-primary fs-4 me-3" aria-hidden="true"></i>
-                            <span><strong>Expert Supervision:</strong> Our seasoned crew ensures your safety and comfort, letting you focus on enjoying the ride.</span>
+                            <i class="fa-solid fa-shield-halved text-primary fs-4 me-3" aria-hidden="true"></i>
+                            <span><strong>Expert Supervision:</strong> Our seasoned crew ensures your safety and comfort, letting you focus on the thrill.</span>
                         </li>
                         <li class="mb-3 d-flex align-items-start">
-                            <i class="bi bi-compass text-primary fs-4 me-3" aria-hidden="true"></i>
+                            <i class="fa-solid fa-compass text-primary fs-4 me-3" aria-hidden="true"></i>
                             <span><strong>Customizable Experiences:</strong> From serene swings to adventure combos, tailor your package to your desires.</span>
                         </li>
                         <li class="mb-3 d-flex align-items-start">
-                            <i class="bi bi-gem text-primary fs-4 me-3" aria-hidden="true"></i>
+                            <i class="fa-solid fa-gem text-primary fs-4 me-3" aria-hidden="true"></i>
                             <span><strong>Authentic Access:</strong> We select premium locations that reveal Bali’s hidden beauty, far from the usual crowds.</span>
                         </li>
                         <li class="mb-3 d-flex align-items-start">
-                            <i class="bi bi-tools text-primary fs-4 me-3" aria-hidden="true"></i>
+                            <i class="fa-solid fa-toolbox text-primary fs-4 me-3" aria-hidden="true"></i>
                             <span><strong>Quality & Care:</strong> Well-maintained swings, safety gear, and attentive support ensure a flawless, memorable day.</span>
                         </li>
                     </ul>
@@ -209,9 +396,9 @@
             </div>
         </section>
 
-        <!-- Testimonials Section -->
+        <!-- Testimonials -->
         <section class="py-5 bg-light" aria-labelledby="testimonials-title">
-            <h2 id="testimonials-title" class="section-heading text-center mb-5 fw-bold text-primary">What Our Guests Say</h2>
+            <h2 id="testimonials-title" class="text-center mb-5 text-primary" style="font-weight:900;">What Our Guests Say</h2>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="testimonial-box p-4 bg-white shadow-sm h-100">
@@ -240,21 +427,21 @@
             </div>
         </section>
 
-        <!-- Call to Action Section -->
+        <!-- Call to Action -->
         <section class="text-center mb-5" aria-labelledby="cta-title">
-            <h2 id="cta-title" class="section-heading text-primary fw-bold mb-4">Ready to Take Flight?</h2>
+            <h2 id="cta-title" class="text-primary fw-bold mb-4" style="font-weight:900;">Ready to Take Flight?</h2>
             <p class="mb-4 fs-5 text-muted">
                 Book now and pay upon arrival. Let us lift you into Bali’s skies, where every swing brings a new perspective on paradise.
             </p>
-            <a href="https://api.whatsapp.com/send/?phone=628123925805&text&type=phone_number&app_absent=0"
+            <a href="https://api.whatsapp.com/send/?phone=628123925805&text=Hello,+I+am+ready+to+book+a+Swing+adventure"
                class="btn btn-danger btn-lg me-3 mb-3 rounded-pill px-4 py-2 btn-book"
-               title="Book your Bali swing adventure via WhatsApp"
-               aria-label="Book your Bali swing adventure on WhatsApp">
+               title="Book your swing adventure via WhatsApp"
+               aria-label="Arrange your swing adventure now on WhatsApp">
                Book Now
             </a>
             <a href="contact.html"
                class="btn btn-outline-primary btn-lg mb-3 rounded-pill px-4 py-2"
-               title="Contact us for inquiries and more details"
+               title="Contact us for inquiries"
                aria-label="Contact us for more details">
                Contact Us
             </a>
@@ -281,13 +468,22 @@
                    class="text-white mx-2 text-decoration-none social-link"
                    title="Follow us on Instagram"
                    aria-label="Instagram link">Instagram</a>
+                <a href="https://www.tripadvisor.co.id/Attraction_Review-g297696-d13271730-Reviews-Gede_Bali_Tour-Jimbaran_South_Kuta_Bali.html"
+                   class="text-white mx-2 text-decoration-none social-link"
+                   title="Read our TripAdvisor reviews"
+                   aria-label="TripAdvisor link">TripAdvisor</a>
+                <a href="https://maps.app.goo.gl/KCKmfakCv1j1XM646"
+                   class="text-white mx-2 text-decoration-none social-link"
+                   title="View our Google Business Profile"
+                   aria-label="Google Business Profile link">Google Profile</a>
             </div>
 
             <p class="mb-0 text-muted">&copy; 2024 BaliTransport.net. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap & Font Awesome JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </body>
 </html>
