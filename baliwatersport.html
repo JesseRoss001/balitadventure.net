@@ -5,39 +5,255 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Experience the best water sport activities in Bali with BaliTransport.net. From parasailing to jet skiing, book your unforgettable adventure now!"/>
     <meta name="keywords" content="Bali Water Sports, Bali Adventure Activities, Parasailing Bali, Jet Ski Bali, Bali Tour Packages, Bali Transport"/>
-    <title>Bali Transport & Tour Service | Best Water Sports & Adventure Packages</title>
+    <title>BaliTransport.net | Ultimate Bali Water Sports & Adventures</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Playfair Display for headings and Poppins for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="bali-water-sport.css"/>
+
+    <style>
+        /********************************************************************
+         * Custom CSS for Bali Water Sports Page
+         * Well-structured, no invented links, integrated WhatsApp button.
+         ********************************************************************/
+
+        /* Base & Typography */
+        body {
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            color: #333;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            color: #0B3D91;
+            margin-bottom: 1.5rem;
+        }
+        p, ul, li {
+            line-height: 1.6;
+            margin: 0 0 1rem 0;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .fw-bold { font-weight: 700 !important; }
+        .fs-5 { font-size: 1.25rem; }
+        .text-muted { color: #6c757d !important; }
+        .text-primary { color: #0B3D91 !important; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* Navbar */
+        .navbar {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+        }
+        .navbar-nav .nav-link {
+            color: #333 !important;
+            transition: color 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #0B3D91 !important;
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            height: 70vh;
+            background: url('images/beach-6.jpg') center/cover no-repeat;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+            padding: 2rem;
+        }
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero-subtitle {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+        .hero-btn {
+            font-weight: 600;
+            border-radius: 2rem;
+            padding: 0.75rem 1.5rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .hero-btn:hover {
+            background-color: #e0a800;
+            transform: scale(1.05);
+        }
+
+        /* Activities */
+        .activity-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        }
+
+        /* Buttons */
+        .btn-warning {
+            background-color: #ffc107;
+            border-color: #ffc107;
+            color: #000;
+        }
+        .btn-warning:hover {
+            background-color: #e0a800;
+            border-color: #d39e00;
+            color: #fff;
+        }
+        .btn-success:hover {
+            background-color: #218838;
+            color: #fff;
+        }
+
+        /* Sections Background */
+        .bg-light {
+            background-color: #f8f9fa !important;
+        }
+
+        /* Lists for Included / To Bring */
+        .list-unstyled li {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+        .list-unstyled li i {
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+            color: #0B3D91;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            font-size: 0.95rem;
+        }
+        footer a.text-decoration-none {
+            color: #fff;
+        }
+        footer a.text-decoration-none:hover {
+            text-decoration: underline;
+            color: #f8d210 !important;
+        }
+
+        /* WhatsApp Floating Icon */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            transition: background-color 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+        }
+        .whatsapp-float img {
+            width: 30px;
+            height: 30px;
+            margin-top: 15px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+        }
+        @media (max-width: 576px) {
+            .hero-section {
+                height: auto;
+                padding: 4rem 1rem;
+            }
+            .hero-title {
+                font-size: 2rem;
+            }
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-     <!-- Skip to main content link for accessibility -->
+    <!-- Skip to main content link -->
     <a class="visually-hidden-focusable skip-link" href="#main-content" aria-label="Skip to main content">Skip to main content</a>
 
-    <!-- Modern Bootstrap Navbar -->
-    <header class="header bg-white shadow-sm">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white" aria-label="Main navigation">
+    <!-- Floating WhatsApp Icon (From golf page style) -->
+    <a href="https://api.whatsapp.com/send?phone=628123925805&text=Hello+BaliTransport.net%2C+I%20am%20interested%20in%20your%20water%20sports%20services."
+       class="whatsapp-float" 
+       target="_blank" 
+       title="Chat with us on WhatsApp" 
+       aria-label="Chat with us on WhatsApp">
+        <img src="images/icons8-whatsapp-50.png" alt="WhatsApp Chat Icon" />
+    </a>
+
+    <!-- Navbar -->
+    <header class="header sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm" aria-label="Main navigation">
             <div class="container">
-                <!-- Brand -->
                 <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="index.html"
-                   title="Go to BaliTransport.net homepage" aria-label="BaliTransport.net homepage">
-                    <span class="fs-4 brand-title">BaliTransport<span class="text-danger">.net</span></span>
+                   title="Go to BaliTransport.net homepage" aria-label="BaliTransport.net homepage link">
+                   <span class="fs-4 brand-title">BaliTransport<span class="text-danger">.net</span></span>
                 </a>
-                <!-- Toggler/collapsibe Button -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-                        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarContent" aria-controls="navbarContent"
+                        aria-expanded="false" aria-label="Toggle navigation menu">
+                  <span class="navbar-toggler-icon"></span>
                 </button>
-                <!-- Navbar Links -->
+
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <!-- Home -->
-                        <li class="nav-item">
-                            <a class="nav-link text-secondary" href="index.html" title="Home">Home</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link text-secondary" href="index.html" title="Home">Home</a></li>
                         <!-- Blog Dropdown -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-secondary" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Blog">
@@ -47,7 +263,6 @@
                                 <li><a class="dropdown-item" href="bali-swim.html" title="Best beaches to swim Bali">Best Beaches to Swim Bali</a></li>
                                 <li><a class="dropdown-item" href="best-month-bali.html" title="Best month to visit Bali">Best Month to Visit Bali</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                
                             </ul>
                         </li>
                         <!-- Services Dropdown -->
@@ -62,570 +277,232 @@
                                 <li><a class="dropdown-item" href="Swing.html" title="Swing Adventures">Swing Adventures</a></li>
                                 <li><a class="dropdown-item" href="Atv.html" title="ATV Tours">ATV Tours</a></li>
                                 <li><a class="dropdown-item" href="Baliwatersport.html" title="Water Sports">Water Sports</a></li>
+                                <li><a class="dropdown-item" href="golf.html" title="Golf">Golf</a></li>
                                 <li><a class="dropdown-item" href="Raft-trek.html" title="Rafting & Trekking">Rafting & Trekking</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                
-                            </ul>
-                        </li>
-                        <!-- Vehicle Rentals -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-secondary" href="#" id="vehicleDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Vehicle Rentals">
-                                Vehicle Rentals
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="vehicleDropdown">
-                                <li><a class="dropdown-item" href="vehicle-rentals.html" title="All Vehicle Rentals">All Vehicles</a></li>
-                                <li><a class="dropdown-item" href="jeep.html" title="Jeep Rentals">Jeep Rentals</a></li>
-                                <li><a class="dropdown-item" href="atv.html" title="ATV Rentals">ATV Rentals</a></li>
-                                <li><a class="dropdown-item" href="swing.html" title="Swing Rentals">Swing Rentals</a></li>
-                                <!-- Add more vehicle rental options as needed -->
                             </ul>
                         </li>
                         <!-- Gallery -->
-                        <li class="nav-item">
-                            <a class="nav-link text-secondary" href="gallery.html" title="Gallery">Gallery</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link text-secondary" href="gallery.html" title="Gallery">Gallery</a></li>
                         <!-- About -->
-                        <li class="nav-item">
-                            <a class="nav-link text-secondary" href="about.html" title="About Us">About</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link text-secondary" href="about.html" title="About Us">About</a></li>
                         <!-- Contact -->
-                        <li class="nav-item">
-                            <a class="nav-link text-secondary" href="contact.html" title="Contact Us">Contact Us</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link text-secondary" href="contact.html" title="Contact Us">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section with a Wave Divider -->
-    <hero class="hero-section d-flex align-items-center text-white" aria-label="Hero Banner">
+    <!-- Hero -->
+    <section class="hero-section">
         <div class="container text-center">
-            <h1 class="display-3 fw-bold mb-3">Bali's Ultimate Water Sports</h1>
-            <p class="lead mb-4">Elevate your holiday with unparalleled water adventures. Discover Bali’s shimmering waves, vibrant marine life, and thrilling activities crafted just for you.</p>
-            <a href="#activities" class="btn btn-warning btn-lg" 
-               title="Jump to the Activities section"
-               aria-label="Jump to Activities section">
-               <i class="bi bi-play-btn-fill me-2" aria-hidden="true"></i>Explore Activities Now
-            </a>
+            <h1 class="display-3 fw-bold hero-title text-white">Bali's Ultimate Water Sports</h1>
+            <p class="lead hero-subtitle">Dive into Bali’s crystal-clear waters, soar above the waves, and discover thrilling adventures that define paradise.</p>
+            <a href="#activities" class="btn btn-warning btn-lg hero-btn" title="Explore our water activities" aria-label="Explore our water activities">Explore Activities</a>
         </div>
-    </hero>
-    <div class="shape-divider-bottom">
-        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
-            <path fill="#ffffff" d="M0,32L40,37.3C80,43,160,53,240,74.7C320,96,400,128,480,128C560,128,640,96,720,80C800,64,880,64,960,85.3C1040,107,1120,149,1200,149.3C1280,149,1360,107,1400,85.3L1440,64L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"/>
-        </svg>
+    </section>
+
+    <main id="main-content" class="py-5">
+        <!-- Introduction -->
+        <section class="container mb-5 text-center">
+            <h2 class="section-heading fw-bold mb-4">Why Choose Bali Water Sports?</h2>
+            <p class="fs-5 text-muted">From serene snorkeling to adrenaline-pumping fly-fish rides, Bali offers an unmatched variety of aquatic adventures. Enjoy premium equipment, professional guidance, and hassle-free transport. Tailor your experience with us—your gateway to the island’s best water thrills.</p>
+        </section>
+
+        <!-- Activities -->
+       <!-- Activities -->
+<section id="activities" class="container mb-5">
+    <h2 class="section-heading fw-bold mb-4">Featured Water Activities</h2>
+    <p class="fs-5 text-muted text-center mb-5">Choose from a range of activities, each offering a unique coastal exploration of Bali’s beauty.</p>
+    <div class="row g-4">
+        <!-- Parasailing -->
+        <div class="col-md-3 col-sm-6">
+            <div class="card activity-card h-100 border-0 shadow">
+                <img src="images/para.webp" class="card-img-top" alt="Parasailing" style="height:220px;object-fit:cover;">
+                <div class="card-body text-center">
+                    <h5 class="fw-bold text-primary">Parasailing</h5>
+                    <p class="text-secondary">IDR 750k</p>
+                </div>
+            </div>
+        </div>
+        <!-- Banana Boat -->
+        <div class="col-md-3 col-sm-6">
+            <div class="card activity-card h-100 border-0 shadow">
+                <img src="images/banana.webp" class="card-img-top" alt="Banana Boat" style="height:220px;object-fit:cover;">
+                <div class="card-body text-center">
+                    <h5 class="fw-bold text-primary">Banana Boat</h5>
+                    <p class="text-secondary">IDR 300k</p>
+                </div>
+            </div>
+        </div>
+        <!-- Roulette Donut -->
+        <div class="col-md-3 col-sm-6">
+            <div class="card activity-card h-100 border-0 shadow">
+                <img src="images/tour1.jpg" class="card-img-top" alt="Roulette Donut" style="height:220px;object-fit:cover;">
+                <div class="card-body text-center">
+                    <h5 class="fw-bold text-primary">Roulette Donut</h5>
+                    <p class="text-secondary">IDR 350k</p>
+                </div>
+            </div>
+        </div>
+        <!-- Fly Fish -->
+        <div class="col-md-3 col-sm-6">
+            <div class="card activity-card h-100 border-0 shadow">
+                <img src="images/tour2.jpg" class="card-img-top" alt="Fly Fish" style="height:220px;object-fit:cover;">
+                <div class="card-body text-center">
+                    <h5 class="fw-bold text-primary">Fly Fish</h5>
+                    <p class="text-secondary">IDR 450k</p>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <!-- Activities Section -->
-    <section id="activities" class="py-5" aria-labelledby="activities-heading">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 id="activities-heading" class="text-primary fw-bold">Featured Water Activities</h2>
-                <p class="text-muted">From parasailing above crystal waters to snorkeling among vibrant fish, we have the perfect adventure waiting for you.</p>
-            </div>
-            <div class="row g-4">
-                <!-- Activity: Parasailing Adventure -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="card activity-card border-0 shadow-sm h-100">
-                        <a href="activities/parasailing.html" 
-                           title="Learn more about our Parasailing Adventure" 
-                           aria-label="Learn more about the Parasailing Adventure activity">
-                            <img src="images/para.webp" class="card-img-top" 
-                                 alt="Traveler soaring high above Bali's coastline during Parasailing" 
-                                 title="Parasailing Adventure - Glide through the sky and enjoy panoramic views"
-                                 loading="lazy"/>
-                        </a>
-                        <div class="card-body text-center">
-                            <h5 class="card-title text-primary fw-bold">Parasailing Adventure</h5>
-                            <p class="card-text text-secondary">IDR 750k</p>
-                            <a href="activities/parasailing.html" 
-                               class="stretched-link"
-                               title="View detailed Parasailing Adventure information and booking options"
-                               aria-label="View details and book Parasailing Adventure">
-                               <span class="visually-hidden">View more about Parasailing Adventure</span>
-                            </a>
-                        </div>
-                    </div>
+    <div class="row g-4 mt-4">
+        <!-- Jet Ski -->
+        <div class="col-md-3 col-sm-6">
+            <div class="card activity-card h-100 border-0 shadow">
+                <img src="images/jetski.webp" class="card-img-top" alt="Jet Ski" style="height:220px;object-fit:cover;">
+                <div class="card-body text-center">
+                    <h5 class="fw-bold text-primary">Jet Ski w/ Instructor</h5>
+                    <p class="text-secondary">IDR 700k</p>
                 </div>
-                <!-- Activity: Banana Boat -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="card activity-card border-0 shadow-sm h-100">
-                        <a href="activities/banana-boat.html" 
-                           title="Discover our Banana Boat activity" 
-                           aria-label="Discover Banana Boat activity details">
-                            <img src="images/banana.webp" class="card-img-top"
-                                 alt="A group laughing on a Banana Boat ride across Bali’s vibrant waters" 
-                                 title="Banana Boat Ride - Fun family-friendly ride across gentle waves"
-                                 loading="lazy"/>
-                        </a>
-                        <div class="card-body text-center">
-                            <h5 class="card-title text-primary fw-bold">Banana Boat</h5>
-                            <p class="card-text text-secondary">IDR 300k</p>
-                            <a href="activities/banana-boat.html" 
-                               class="stretched-link"
-                               title="View more details and booking options for Banana Boat rides"
-                               aria-label="View Banana Boat activity details">
-                               <span class="visually-hidden">View more about Banana Boat</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Activity: Roulette Donut -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="card activity-card border-0 shadow-sm h-100">
-                        <a href="activities/roulette-donut.html"
-                           title="Find out about the Roulette Donut experience"
-                           aria-label="Roulette Donut activity details link">
-                            <img src="images/tour1.jpg" class="card-img-top"
-                                 alt="The Roulette Donut inflatable spinning and bouncing over the waves" 
-                                 title="Roulette Donut - Spin, bounce, and laugh as you cruise the water"
-                                 loading="lazy"/>
-                        </a>
-                        <div class="card-body text-center">
-                            <h5 class="card-title text-primary fw-bold">Roulette Donut</h5>
-                            <p class="card-text text-secondary">IDR 350k</p>
-                            <a href="activities/roulette-donut.html"
-                               class="stretched-link"
-                               title="Learn more about the Roulette Donut ride and reserve your spot"
-                               aria-label="Details and booking for Roulette Donut">
-                               <span class="visually-hidden">View more about Roulette Donut</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Activity: Fly Fish -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="card activity-card border-0 shadow-sm h-100">
-                        <a href="activities/fly-fish.html"
-                           title="Learn about Fly Fish activity details"
-                           aria-label="Fly Fish activity details link">
-                            <img src="images/tour2.jpg" class="card-img-top"
-                                 alt="Fly Fish inflatable soaring momentarily above the ocean surface" 
-                                 title="Fly Fish - Experience the thrill of flying just above the waves"
-                                 loading="lazy"/>
-                        </a>
-                        <div class="card-body text-center">
-                            <h5 class="card-title text-primary fw-bold">Fly Fish</h5>
-                            <p class="card-text text-secondary">IDR 450k</p>
-                            <a href="activities/fly-fish.html"
-                               class="stretched-link"
-                               title="View Fly Fish details and booking availability"
-                               aria-label="View Fly Fish details">
-                               <span class="visually-hidden">View more about Fly Fish</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Activity: Jet Ski w/ Instructor -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="card activity-card border-0 shadow-sm h-100">
-                        <a href="activities/jet-ski.html"
-                           title="Explore Jet Skiing with an Instructor details"
-                           aria-label="Jet Ski with Instructor details link">
-                            <img src="images/jetski.webp" class="card-img-top"
-                                 alt="A professional instructor guiding a jet ski rider across clear waters"
-                                 title="Jet Ski w/ Instructor - Perfect for beginners seeking safe thrills"
-                                 loading="lazy"/>
-                        </a>
-                        <div class="card-body text-center">
-                            <h5 class="card-title text-primary fw-bold">Jet Ski w/ Instructor</h5>
-                            <p class="card-text text-secondary">IDR 700k</p>
-                            <a href="activities/jet-ski.html"
-                               class="stretched-link"
-                               title="Learn about Jet Ski sessions with an instructor and book now"
-                               aria-label="Jet Ski details and booking">
-                               <span class="visually-hidden">View more about Jet Ski w/ Instructor</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Activity: Wakeboard -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="card activity-card border-0 shadow-sm h-100">
-                        <a href="activities/wakeboard.html"
-                           title="Check out the Wakeboard experience"
-                           aria-label="Wakeboard details link">
-                            <img src="images/tour3.webp" class="card-img-top"
-                                 alt="A wakeboarder skillfully gliding on the water surface"
-                                 title="Wakeboard - Challenge yourself and test your balance on the waves"
-                                 loading="lazy"/>
-                        </a>
-                        <div class="card-body text-center">
-                            <h5 class="card-title text-primary fw-bold">Wakeboard</h5>
-                            <p class="card-text text-secondary">IDR 650k</p>
-                            <a href="activities/wakeboard.html"
-                               class="stretched-link"
-                               title="View Wakeboard details, skill requirements, and booking"
-                               aria-label="Wakeboard activity booking details">
-                               <span class="visually-hidden">View more about Wakeboard</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Activity: Snorkeling -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="card activity-card border-0 shadow-sm h-100">
-                        <a href="activities/snorkeling.html"
-                           title="Discover Snorkeling options in Bali"
-                           aria-label="Snorkeling details link">
-                            <img src="images/snorkle.webp" class="card-img-top"
-                                 alt="A snorkeler observing a school of colorful reef fish"
-                                 title="Snorkeling - Immerse yourself in Bali’s vibrant underwater world"
-                                 loading="lazy"/>
-                        </a>
-                        <div class="card-body text-center">
-                            <h5 class="card-title text-primary fw-bold">Snorkeling</h5>
-                            <p class="card-text text-secondary">IDR 350k</p>
-                            <a href="activities/snorkeling.html"
-                               class="stretched-link"
-                               title="View Snorkeling trip details and marine life highlights"
-                               aria-label="Snorkeling booking and details">
-                               <span class="visually-hidden">View more about Snorkeling</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-4">
-                <a href="#book" class="btn btn-success btn-lg"
-                   title="Proceed to booking section"
-                   aria-label="Go to Booking section to reserve your activities">
-                   <i class="bi bi-book-fill me-2" aria-hidden="true"></i>Reserve Your Experience
-                </a>
             </div>
         </div>
-    </section>
-
-    <!-- Shape Divider -->
-    <div class="shape-divider-top-bottom">
-        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
-            <path fill="#e6f4f9" d="M0,64L1440,0L1440,0L0,0Z"></path>
-        </svg>
+        <!-- Wakeboard -->
+        <div class="col-md-3 col-sm-6">
+            <div class="card activity-card h-100 border-0 shadow">
+                <img src="images/tour3.webp" class="card-img-top" alt="Wakeboard" style="height:220px;object-fit:cover;">
+                <div class="card-body text-center">
+                    <h5 class="fw-bold text-primary">Wakeboard</h5>
+                    <p class="text-secondary">IDR 650k</p>
+                </div>
+            </div>
+        </div>
+        <!-- Snorkeling -->
+        <div class="col-md-3 col-sm-6">
+            <div class="card activity-card h-100 border-0 shadow">
+                <img src="images/snorkle.webp" class="card-img-top" alt="Snorkeling" style="height:220px;object-fit:cover;">
+                <div class="card-body text-center">
+                    <h5 class="fw-bold text-primary">Snorkeling</h5>
+                    <p class="text-secondary">IDR 350k</p>
+                </div>
+            </div>
+        </div>
     </div>
+</section>
 
-    <!-- Best Packages -->
-    <section class="py-5 bg-light" aria-labelledby="packages-heading">
+
+        <!-- Explore More Adventures with Actual Links -->
+        <section class="py-5">
+            <div class="container text-center">
+                <h2 class="section-heading fw-bold mb-4">Explore More Adventures</h2>
+                <p class="fs-5 text-muted mb-5">Expand your Bali journey with activities on land and lush landscapes.</p>
+                <div class="row g-4 justify-content-center">
+                    <!-- All links from original code snippet, no invention -->
+                    <div class="col-md-2 col-sm-4">
+                        <a href="Atv.html" class="text-muted fs-5" title="ATV Tours">ATV</a>
+                    </div>
+                    <div class="col-md-2 col-sm-4">
+                        <a href="Swing.html" class="text-muted fs-5" title="Swing Adventures">Swing</a>
+                    </div>
+                    <div class="col-md-2 col-sm-4">
+                        <a href="Jeep.html" class="text-muted fs-5" title="Jeep Tracking">Jeep Trekking</a>
+                    </div>
+                    <div class="col-md-2 col-sm-4">
+                        <a href="Raft-trek.html" class="text-muted fs-5" title="Rafting & Trekking">Rafting</a>
+                    </div>
+                    <div class="col-md-2 col-sm-4">
+                        <a href="Raft-trek.html" class="text-muted fs-5" title="Rafting & Trekking">Trekking</a>
+                    </div>
+                    <div class="col-md-2 col-sm-4">
+                        <a href="cycling-horse.html" class="text-muted fs-5" title="Cycling & Horse Riding">Horse Riding</a>
+                    </div>
+                    <div class="col-md-2 col-sm-4">
+                        <a href="cycling-horse.html" class="text-muted fs-5" title="Cycling & Horse Riding">Cycling</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+    </main>
+
+    <footer class="bg-dark text-white py-5" aria-label="Site Footer">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 id="packages-heading" class="text-primary fw-bold">Value-Packed Activity Bundles</h2>
-                <p class="text-muted">Maximize your fun and savings with our carefully curated packages. Perfect for those seeking variety and convenience.</p>
-            </div>
-            <div class="accordion" id="packagesAccordion">
-                <div class="accordion-item border-0 mb-3 shadow-sm">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button collapsed fw-bold text-primary"
-                                type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne"
-                                aria-expanded="false" aria-controls="collapseOne">
-                            PACKAGE 1 : IDR 950k
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse"
-                         aria-labelledby="headingOne" data-bs-parent="#packagesAccordion">
-                        <div class="accordion-body">
-                            <ul class="mb-0">
-                                <li>Parasailing Adventure</li>
-                                <li>Banana Boat</li>
-                                <li>Jet Ski</li>
-                            </ul>
-                        </div>
-                    </div>
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-md-6 mb-4 text-center">
+                    <h5 class="fw-semibold mb-3">Bali Transport</h5>
+                    <p>Jl. Sunset Road No. 123, Jimbaran, Bali, Indonesia</p>
+                    <p class="mb-2"><strong>Phone / WhatsApp:</strong> 
+                        <a href="tel:+628123925805" class="text-white text-decoration-underline" title="Call or WhatsApp Bali Transport">+62 8123 92 5805</a>
+                    </p>
+                    <p class="mb-2"><strong>Email:</strong> 
+                        <a href="mailto:gedebalitour007@gmail.com" class="text-white text-decoration-underline" title="Email Bali Transport">gedebalitour007@gmail.com</a>
+                    </p>
                 </div>
-                <div class="accordion-item border-0 mb-3 shadow-sm">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed fw-bold text-primary"
-                                type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwo"
-                                aria-expanded="false" aria-controls="collapseTwo">
-                            PACKAGE 2 : IDR 850k
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse"
-                         aria-labelledby="headingTwo" data-bs-parent="#packagesAccordion">
-                        <div class="accordion-body">
-                            <ul class="mb-0">
-                                <li>Parasailing Adventure</li>
-                                <li>Banana Boat</li>
-                                <li>Roulette Donut</li>
-                            </ul>
-                        </div>
-                    </div>
+                <!-- Quick Links -->
+                <div class="col-md-6 mb-4 ">
+                    <h5 class="fw-semibold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled text-center">
+                        <li><a href="index.html" class="text-white text-decoration-none" title="Home">Home</a></li>
+                        <li><a href="services-airport.html" class="text-white text-decoration-none" title="Airport Travel">Airport Travel</a></li>
+                        <li><a href="Jeep.html" class="text-white text-decoration-none" title="Jeep Tracking">Jeep Tracking</a></li>
+                        <li><a href="about.html" class="text-white text-decoration-none" title="About Us">About Us</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none" title="Contact Us">Contact Us</a></li>
+                    </ul>
                 </div>
-                <!-- Additional packages can be listed similarly -->
-                <div class="text-center mt-4">
-                    <p class="text-muted mb-3">Can’t find the perfect combo? Let us know and we’ll help you customize!</p>
-                    <a href="#book" class="btn btn-success btn-lg"
-                       title="Continue to booking section to reserve or customize a package"
-                       aria-label="Go to booking section for package reservations">
-                       <i class="bi bi-book-fill me-2" aria-hidden="true"></i>Customize Your Bundle
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- South Bali Beach Tour Recommendations -->
-    <section class="py-5" aria-labelledby="tours-heading">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 id="tours-heading" class="text-primary fw-bold">South Bali Coastal Tours</h2>
-                <p class="text-muted">Elevate your day with scenic beaches, cultural landmarks, and vibrant local spots handpicked by our experts.</p>
-            </div>
-            <div class="accordion" id="tripsAccordion">
-                <div class="accordion-item border-0 mb-3 shadow-sm">
-                    <h2 class="accordion-header" id="tripOne">
-                        <button class="accordion-button collapsed fw-bold text-primary" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#collapseTripOne"
-                                aria-expanded="false" aria-controls="collapseTripOne">
-                            TRIP 1
-                        </button>
-                    </h2>
-                    <div id="collapseTripOne" class="accordion-collapse collapse"
-                         aria-labelledby="tripOne" data-bs-parent="#tripsAccordion">
-                        <div class="accordion-body">
-                            <ul class="mb-0">
-                                <li>Water Sports</li>
-                                <li>Padang-Padang Beach</li>
-                                <li>Uluwatu Cliff Temple</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- Additional trips can be similarly listed -->
-            </div>
-            <div class="text-center mt-4">
-                <p class="text-muted mb-3">Starting at IDR 650k per car (includes private vehicle, driver, and fuel)</p>
-                <a href="#book" class="btn btn-success btn-lg"
-                   title="Proceed to booking section to reserve your coastal tour"
-                   aria-label="Reserve your coastal tour now">
-                   <i class="bi bi-book-fill me-2" aria-hidden="true"></i>Book Coastal Tour
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services & More Information -->
-    <section class="py-5 bg-light" aria-labelledby="services-heading">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 id="services-heading" class="text-primary fw-bold">Our Core Services</h2>
-                <p class="text-muted">Comprehensive travel solutions designed to simplify your Bali experience.</p>
-            </div>
-            <div class="row g-4 mb-5">
-                <div class="col-md-3 col-sm-6">
-                    <div class="service-box p-4 text-center" title="Airport & Hotel Transfers - seamless arrivals and departures">
-                        <h5>Airport & Hotel Transfers</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="service-box p-4 text-center" title="Explore Bali’s highlights in one day">
-                        <h5>Bali Full-Day Tour</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="service-box p-4 text-center" title="Short yet fulfilling half-day excursions">
-                        <h5>Half-Day Tour</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="service-box p-4 text-center" title="Get a custom itinerary made just for you">
-                        <h5>Itinerary Planner</h5>
-                    </div>
-                </div>
-                <!-- Additional services can continue here -->
-            </div>
-
-            <!-- Who We Serve -->
-            <div class="text-center mb-5">
-                <h2 class="text-primary fw-bold">Who We Cater To</h2>
-                <p class="text-muted">Whether you’re a duo seeking romance, a family forging memories, or a large group ready for adventure, we have you covered.</p>
-            </div>
-            <div class="row g-4 mb-5">
-                <div class="col-md-4">
-                    <div class="service-box p-4 text-center" title="Perfect getaways for couples">
-                        <h5>Couples</h5>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-box p-4 text-center" title="Fun for the whole family, young to old">
-                        <h5>Big Families</h5>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-box p-4 text-center" title="Group adventures made easy">
-                        <h5>Groups</h5>
+                <!-- Social Media & WhatsApp Link -->
+                <div class="col-md-12 mb-4">
+                    <h5 class="fw-semibold text-center mb-3">Follow & Contact Us</h5>
+                    <div class="d-flex justify-content-center flex-wrap">
+                        <a href="https://api.whatsapp.com/send?phone=628123925805&text=Hello+BaliTransport.net%2C+I'm+interested+in+your+services" 
+                           class="btn btn-outline-success me-2 mb-2" 
+                           target="_blank" 
+                           title="Chat with us on WhatsApp"
+                           aria-label="Chat with us on WhatsApp">
+                            <i class="bi bi-whatsapp me-1"></i> WhatsApp
+                        </a>
+                        <a href="https://www.facebook.com/TRANSBALINOW" 
+                           class="btn btn-outline-primary me-2 mb-2" 
+                           target="_blank" 
+                           title="Follow Bali Transport on Facebook" 
+                           aria-label="Follow us on Facebook">
+                            <i class="fab fa-facebook-f me-1"></i> Facebook
+                        </a>
+                        <a href="https://www.instagram.com/transbali_activity/" 
+                           class="btn btn-outline-danger me-2 mb-2" 
+                           target="_blank" 
+                           title="Follow Bali Transport on Instagram" 
+                           aria-label="Follow us on Instagram">
+                            <i class="fab fa-instagram me-1"></i> Instagram
+                        </a>
+                        <a href="https://www.tripadvisor.co.id/Attraction_Review-g297696-d13271730-Reviews-Gede_Bali_Tour-Jimbaran_South_Kuta_Bali.html" 
+                           class="btn btn-outline-success me-2 mb-2"
+                           target="_blank" 
+                           title="Read our reviews on TripAdvisor" 
+                           aria-label="Read our reviews on TripAdvisor">
+                            <i class="fab fa-tripadvisor me-1"></i> TripAdvisor
+                        </a>
+                        <a href="https://maps.app.goo.gl/KCKmfakCv1j1XM646" 
+                           class="btn btn-outline-warning me-2 mb-2"
+                           target="_blank" 
+                           title="View our Google Business Profile" 
+                           aria-label="View our Google Business Profile">
+                            <i class="fab fa-google me-1"></i> Google
+                        </a>
                     </div>
                 </div>
             </div>
-
-            <!-- Vehicles Provided -->
-            <div class="text-center mb-5">
-                <h2 class="text-primary fw-bold">Our Fleet of Vehicles</h2>
-                <p class="text-muted">Travel in comfort with our diverse range of transportation options, suited for any group size.</p>
-            </div>
-            <div class="row g-4 mb-5">
-                <div class="col-md-4">
-                    <div class="service-box p-4 text-center" title="7-seat MPV for small groups">
-                        <h5>MPV Car (7 Seater)</h5>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-box p-4 text-center" title="Spacious 14-seat van for larger parties">
-                        <h5>Big Van (14 Seater)</h5>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-box p-4 text-center" title="Comfortable 19-seat mini bus for big groups">
-                        <h5>Mini Bus (19 Seater)</h5>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pickup Areas -->
-            <div class="text-center mb-5">
-                <h2 class="text-primary fw-bold">Pickup Locations Across Bali</h2>
-                <p class="text-muted">We conveniently serve multiple areas, ensuring easy access no matter where you stay.</p>
-            </div>
-            <div class="row g-4 mb-5">
-                <!-- Just listing the areas is sufficient, but tooltips are included for consistency. -->
-                <div class="col-md-4"><div class="service-box p-4 text-center" title="Pickup available in Canggu">Canggu</div></div>
-                <div class="col-md-4"><div class="service-box p-4 text-center" title="Pickup available in Seminyak">Seminyak</div></div>
-                <div class="col-md-4"><div class="service-box p-4 text-center" title="Pickup available in Legian">Legian</div></div>
-                <div class="col-md-4"><div class="service-box p-4 text-center" title="Pickup available in Kuta">Kuta</div></div>
-                <div class="col-md-4"><div class="service-box p-4 text-center" title="Pickup available in Jimbaran">Jimbaran</div></div>
-                <div class="col-md-4"><div class="service-box p-4 text-center" title="Pickup available in Uluwatu">Uluwatu</div></div>
-                <div class="col-md-4"><div class="service-box p-4 text-center" title="Pickup available in Nusa Dua">Nusa Dua</div></div>
-                <div class="col-md-4"><div class="service-box p-4 text-center" title="Pickup available in Sanur">Sanur</div></div>
-                <div class="col-md-4"><div class="service-box p-4 text-center" title="Pickup available in Ubud">Ubud</div></div>
-            </div>
-
-            <!-- Activities Included -->
-            <div class="text-center mb-5">
-                <h2 class="text-primary fw-bold">What’s Included</h2>
-                <p class="text-muted">Enjoy peace of mind with all the essentials taken care of, leaving you free to savor every moment.</p>
-            </div>
-            <div class="row g-4 mb-5">
-                <div class="col-md-4"><div class="service-box p-4 text-center" title="Round-trip transportation included">Private Return Transport</div></div>
-                <div class="col-md-4"><div class="service-box p-4 text-center" title="No hidden costs, activity fees covered">All Activities Fees</div></div>
-                <div class="col-md-4"><div class="service-box p-4 text-center" title="Comprehensive insurance for your safety">Insurance</div></div>
-                <div class="col-md-4"><div class="service-box p-4 text-center" title="Stay hydrated with free mineral water">Mineral Water</div></div>
-                <div class="col-md-4"><div class="service-box p-4 text-center" title="Secure storage for your belongings">Locker</div></div>
-                <div class="col-md-4"><div class="service-box p-4 text-center" title="Towels provided for your comfort">Towel</div></div>
-            </div>
-
-            <!-- What to Bring -->
-            <div class="text-center mb-5">
-                <h2 class="text-primary fw-bold">What to Bring</h2>
-                <p class="text-muted">Come prepared so you can fully immerse yourself in the fun with no interruptions.</p>
-            </div>
-            <div class="row g-4 mb-5">
-                <div class="col-md-4"><div class="service-box p-4 text-center" title="Bring a fresh outfit for after your adventure">Changing Clothes</div></div>
-                <div class="col-md-4"><div class="service-box p-4 text-center" title="Extra towel to keep dry and comfortable">Extra Towel</div></div>
-                <div class="col-md-4"><div class="service-box p-4 text-center" title="Protect your skin from the tropical sun">Sunscreen</div></div>
-                <div class="col-md-4"><div class="service-box p-4 text-center" title="Guard your eyes against glare">Sunglasses</div></div>
-                <div class="col-md-4"><div class="service-box p-4 text-center" title="Comfortable footwear is key">Sandals</div></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Booking Section -->
-    <section id="book" class="py-5 text-center bg-white" aria-labelledby="booking-heading">
-        <div class="container">
-            <h2 id="booking-heading" class="text-primary fw-bold mb-3">Secure Your Adventure Now</h2>
-            <p class="text-muted mb-4">Book ahead and pay upon arrival. It’s that simple. Your unforgettable Bali experience awaits.</p>
-            <a href="contact.html" class="btn btn-success btn-lg"
-               title="Contact us to book or ask any questions"
-               aria-label="Contact us for booking">
-               <i class="bi bi-book-fill me-2" aria-hidden="true"></i>Contact & Reserve
+            <hr class="bg-secondary">
+            <a href="https://cleandesignuk.com" class="text-white text-decoration-none" title="Website design by Clean Design UK" aria-label="Visit Clean Design UK website">
+                <p class="text-center mt-4 mb-0">Website by Clean Design UK</p> 
             </a>
-        </div>
-    </section>
-
-    <!-- Other Adventures -->
-    <section class="py-5 bg-light" aria-labelledby="other-adventures-heading">
-        <div class="container">
-            <div class="text-center mb-4">
-                <h2 id="other-adventures-heading" class="text-primary fw-bold">Explore More Adventures</h2>
-                <p class="text-muted">Extend your Bali journey with exciting activities on land and through lush landscapes.</p>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-2 col-sm-4">
-                    <div class="service-box p-4 text-center" title="ATV rides for adrenaline junkies">
-                        <h5>ATV</h5>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4">
-                    <div class="service-box p-4 text-center" title="Glide over rice terraces on a Bali swing">
-                        <h5>Swing</h5>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4">
-                    <div class="service-box p-4 text-center" title="Off-road Jeep Trekking to hidden gems">
-                        <h5>Jeep Trekking</h5>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4">
-                    <div class="service-box p-4 text-center" title="Rafting through Bali’s scenic rivers">
-                        <h5>Rafting</h5>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4">
-                    <div class="service-box p-4 text-center" title="Trekking into Bali’s lush heartlands">
-                        <h5>Trekking</h5>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4">
-                    <div class="service-box p-4 text-center" title="Romantic horse rides along the shore">
-                        <h5>Horse Riding</h5>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4">
-                    <div class="service-box p-4 text-center" title="Cycling through charming villages and fields">
-                        <h5>Cycling</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-5 bg-dark text-white" aria-label="Site Footer">
-        <div class="container text-center">
-            <h5 class="fw-bold mb-3">Get In Touch</h5>
-            <p class="mb-1"><strong>Bali Transport</strong></p>
-            <p class="mb-1">Phone / WhatsApp: 
-                <a href="tel:+628123925805" class="text-decoration-none text-warning" 
-                   title="Call or WhatsApp Bali Transport"
-                   aria-label="Phone or WhatsApp Bali Transport at +62 8123 92 5805">
-                   +62 8123 92 5805
-                </a>
-            </p>
-            <p class="mb-3">Email: 
-                <a href="mailto:gedebalitour007@gmail.com" class="text-decoration-none text-warning" 
-                   title="Send an email to Bali Transport"
-                   aria-label="Email Bali Transport at gedebalitour007@gmail.com">
-                   gedebalitour007@gmail.com
-                </a>
-            </p>
-            <div class="footer-links mb-4">
-                <a href="index.html" class="text-decoration-none text-light mx-2"
-                   title="Return to our Homepage" aria-label="Homepage link">Home</a>
-                <a href="about.html" class="text-decoration-none text-light mx-2"
-                   title="Learn about Bali Transport" aria-label="About page link">About</a>
-                <a href="tour-package.html" class="text-decoration-none text-light mx-2"
-                   title="Explore our tour packages" aria-label="Tour Packages link">Tour Packages</a>
-                <a href="contact.html" class="text-decoration-none text-light mx-2"
-                   title="Contact us for bookings or questions" aria-label="Contact page link">Contact Us</a>
-                <a href="gallery.html" class="text-decoration-none text-light mx-2"
-                   title="View our gallery of Bali experiences" aria-label="Gallery link">Gallery</a>
-                <a href="news-articles.html" class="text-decoration-none text-light mx-2"
-                   title="Read news and articles related to Bali tours" aria-label="News & Articles link">News & Articles</a>
-            </div>
-            <p class="mb-0 text-muted">&copy; 2024 BaliTransport.net. Crafted with care for your Bali adventure.</p>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap & FontAwesome JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </body>
 </html>

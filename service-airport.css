@@ -124,7 +124,7 @@ header .container {
 .price {
     font-size: 1.25rem;
     font-weight: bold;
-    color: #fff !important; /* White text as per user request */
+    color: black !important; /* White text as per user request */
 }
 
 /* Card Header Styles */
