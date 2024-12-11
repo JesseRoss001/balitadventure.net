@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Explore Bali with Bali Transport, your trusted guide for personalized tours, travel advice, and must-see attractions.">
-    <meta name="keywords" content="Bali island travel, Bali best places to visit, Sangeh monkey forest Bali, Bali tourist attractions, Bali Transport, Bali tours, Bali travel guide">
+    <meta name="description" content="Explore Bali with Bali Transport, your trusted guide for personalized tours, travel advice, and must-see attractions."/>
+    <meta name="keywords" content="Bali island travel, Bali best places to visit, Sangeh monkey forest Bali, Bali tourist attractions, Bali Transport, Bali tours, Bali travel guide"/>
     <meta name="author" content="BaliTransport.net"/>
     <title>About Us | Bali Transport</title>
 
@@ -12,14 +12,130 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Montserrat for headings and Poppins for body -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="about.css"/>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700; /* Using fw-bold equivalent here */
+            margin-bottom: 1rem;
+        }
+        .brand-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        .header .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        .hero-section {
+            height: 60vh;
+            background: url('images/beach-2.jpg') center/cover no-repeat;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            padding: 2rem;
+        }
+        .hero-content {
+            background: rgba(0,0,0,0.6);
+            padding: 2rem;
+            border-radius: 0.5rem;
+        }
+        .hero-content .display-4 {
+            font-size: 2.5rem;
+        }
+        .hero-content .lead {
+            font-size: 1.25rem;
+            color: #ddd;
+        }
+        .hero-btn {
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .hero-btn:hover {
+            background-color: #ffc107;
+            transform: translateY(-3px);
+        }
+        .whatsapp-float {
+            position: fixed;
+            width: 60px; height: 60px;
+            bottom: 20px; right: 20px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 4px 4px 20px rgba(0,0,0,0.4);
+        }
+        .whatsapp-float img {
+            width: 30px;
+            height: 30px;
+        }
+        .section-heading {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .section-heading.text-primary {
+            color: #0dcaf0;
+        }
+        .header-section {
+            background: url('images/beach-2.jpg') center/cover no-repeat;
+        }
+        .beach-card img, .owner-profile img, .testimonials img {
+            border-radius: 0.5rem;
+        }
+        footer {
+            background-color: #212529;
+            color: #fff;
+            font-size: 0.95rem;
+        }
+        footer a {
+            color: #adb5bd;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+            color: #0dcaf0;
+        }
+        @media (max-width: 992px) {
+            .hero-content .display-4 {
+                font-size: 2rem;
+            }
+            .hero-section {
+                height: 50vh;
+            }
+        }
+        @media (max-width: 576px) {
+            .hero-section {
+                height: auto;
+                padding: 4rem 1rem;
+            }
+            .hero-content .display-4 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Skip to main content link for accessibility -->
@@ -38,9 +154,9 @@
     <header class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" aria-label="Main navigation of BaliTransport.net">
             <div class="container">
-                <a class="navbar-brand fw-bold text-dark d-flex align-items-center" href="index.html"
+                <a class="navbar-brand text-dark d-flex align-items-center" href="index.html"
                    title="Go to BaliTransport.net homepage" aria-label="BaliTransport.net homepage link">
-                   <span class="fs-4 brand-title">BaliTransport<span class="text-danger">.net</span></span>
+                   <span class="brand-title fs-4">BaliTransport<span class="text-danger">.net</span></span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarContent" aria-controls="navbarContent"
@@ -50,7 +166,7 @@
                 
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link text-dark" href="index.html" title="Return to BaliTransport.net homepage">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="index.html" title="Home">Home</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-dark" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Blog">
                                 Blog
@@ -73,19 +189,8 @@
                                 <li><a class="dropdown-item" href="Atv.html" title="ATV Tours">ATV Tours</a></li>
                                 <li><a class="dropdown-item" href="Baliwatersport.html" title="Water Sports">Water Sports</a></li>
                                 <li><a class="dropdown-item" href="Raft-trek.html" title="Rafting & Trekking">Rafting & Trekking</a></li>
+                                <li><a class="dropdown-item" href="golf.html" title="Golf">Golf</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-dark" href="#" id="vehicleDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Vehicle Rentals">
-                                Vehicle Rentals
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="vehicleDropdown">
-                                <li><a class="dropdown-item" href="vehicle-rentals.html" title="All Vehicle Rentals">All Vehicles</a></li>
-                                <li><a class="dropdown-item" href="jeep.html" title="Jeep Rentals">Jeep Rentals</a></li>
-                                <li><a class="dropdown-item" href="atv.html" title="ATV Rentals">ATV Rentals</a></li>
-                                <li><a class="dropdown-item" href="swing.html" title="Swing Rentals">Swing Rentals</a></li>
-                                <!-- Add more vehicle rental options as needed -->
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link text-dark" href="gallery.html" title="Gallery">Gallery</a></li>
@@ -98,30 +203,30 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-section text-white text-center d-flex align-items-center" style="background:url('images/beach-2.jpg') center/cover no-repeat;">
+    <section class="hero-section d-flex align-items-center">
         <div class="container position-relative">
-            <div class="hero-content bg-dark bg-opacity-50 p-4 rounded">
-                <h1 class="display-4 fw-semibold mb-3 hero-title">Explore Bali in Comfort & Style</h1>
-                <p class="lead mb-4 hero-subtitle">Embark on a journey tailored to you. <a href="bali-swim.html" class="text-warning fw-bold" title="Read about Bali’s best beaches to swim">Relax on pristine beaches</a>, delve into <a href="bali-tourism.html" class="text-warning fw-bold" title="Learn about Bali’s tourism hotspots">Bali’s cultural wonders</a>, and travel freely with a private driver. Your unforgettable adventure starts now.</p>
-                <a href="#rent-driver" class="btn btn-warning btn-lg hero-btn" title="Jump down to learn about renting a driver in Bali and available packages">Rent a Private Driver</a>
+            <div class="hero-content p-4 rounded">
+                <h1 class="display-4 mb-3 hero-title">Explore Bali in Comfort & Style</h1>
+                <p class="lead mb-4 hero-subtitle">Embark on a journey tailored to you. <a href="bali-swim.html" class="text-warning fw-bold">Relax on pristine beaches</a>, delve into Bali’s cultural wonders, and travel freely with a private driver. Your unforgettable adventure starts now.</p>
+                <a href="#company-overview" class="btn btn-warning btn-lg hero-btn" title="Learn about our company and services">Discover More</a>
             </div>
         </div>
     </section>
 
     <!-- Additional Imagery Below Hero -->
-    <section class="bg-light py-5 text-center" aria-label="Additional Bali imagery and welcoming text">
+    <section class="bg-light py-5 text-center">
         <div class="container">
-            <h2 class="section-heading fw-semibold text-primary mb-4" title="Bali awaits with stunning visuals and memorable experiences">Bali Awaits</h2>
-            <p class="fs-5 text-muted mb-4">Get ready to immerse yourself in lush rice terraces, volcano views, sacred temples, vibrant markets, and friendly locals eager to share their heritage. Travel at your own pace, guided by our experienced drivers.</p>
+            <h2 class="section-heading text-primary">Bali Awaits</h2>
+            <p class="fs-5 text-muted mb-4">Immerse yourself in lush rice terraces, volcano views, sacred temples, and friendly locals eager to share their heritage. Travel at your own pace, guided by our experienced drivers.</p>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <img src="images/pexels-mikhail-nilov-6965514.jpg" alt="Jeep adventure at Mount Batur showing scenic volcano" title="Jeep adventure near Mount Batur volcano" class="img-fluid rounded shadow"/>
+                    <img src="images/pexels-mikhail-nilov-6965514.jpg" alt="Jeep adventure at Mount Batur" title="Jeep adventure near Mount Batur volcano" class="img-fluid rounded shadow"/>
                 </div>
                 <div class="col-md-4">
-                    <img src="images/jetski.webp" alt="Cyclist passing through Bali's emerald rice fields" title="Cycling through Bali’s green rice fields" class="img-fluid rounded shadow"/>
+                    <img src="images/jetski.webp" alt="Cyclist in Bali's rice fields" title="Cycling through Bali’s green rice fields" class="img-fluid rounded shadow"/>
                 </div>
                 <div class="col-md-4">
-                    <img src="images/swing-2.webp" alt="Bali swing high above lush canopy" title="Swing high above Bali’s lush canopy" class="img-fluid rounded shadow"/>
+                    <img src="images/swing-2.webp" alt="Bali swing above lush canopy" title="Swing high above Bali’s lush canopy" class="img-fluid rounded shadow"/>
                 </div>
             </div>
         </div>
@@ -129,15 +234,15 @@
 
     <main id="main-content" class="container py-5">
         <!-- Company Overview Section -->
-        <section id="company-overview" class="mb-5" aria-labelledby="company-overview-title">
-            <h2 id="company-overview-title" class="section-heading text-center mb-4 fw-semibold text-primary">About Our Company</h2>
+        <section id="company-overview" class="mb-5">
+            <h2 class="section-heading text-primary">About Our Company</h2>
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <p class="fs-5 text-muted">
-                        Discover Bali like never before with Bali Transport, your trusted guide to exploring the beauty, culture, and adventure this island offers. Our team of experienced drivers and tour organizers is here to make your Bali journey seamless, comfortable, and unforgettable.
+                        Discover Bali like never before with Bali Transport, your trusted guide to exploring the island’s beauty, culture, and adventure. Our experienced drivers and tour organizers ensure every journey is seamless, comfortable, and unforgettable.
                     </p>
                     <p class="fs-5 text-muted">
-                        We specialize in personalized Bali tours, whether you're seeking full-day excursions, half-day adventures, or unique activities tailored to your interests. At Bali Transport, we prioritize your convenience and satisfaction with clean, modern vehicles and skilled, friendly drivers who are ready to share their local knowledge.
+                        We specialize in personalized Bali tours, from full-day excursions to half-day adventures and unique activities tailored to your interests. With modern vehicles and knowledgeable local drivers, your trip is in the best hands.
                     </p>
                 </div>
                 <div class="col-md-6">
@@ -147,36 +252,34 @@
         </section>
 
         <!-- Owner Portfolio Section -->
-        <section id="owner-portfolio" class="mb-5" aria-labelledby="owner-portfolio-title">
-            <h2 id="owner-portfolio-title" class="section-heading text-center mb-4 fw-semibold text-primary">Meet Our Owner</h2>
+        <section id="owner-portfolio" class="mb-5">
+            <h2 class="section-heading text-primary">Meet Our Owner</h2>
             <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10">
-                    <div class="owner-profile text-center">
-                        <img src="images/WhatsApp-Image-2024-11-04-at-11.23.55.jpeg" alt="Owner of Bali Transport" title="Owner of Bali Transport" class="img-fluid rounded-circle shadow mb-3" style="width: 200px; height: 200px; object-fit: cover;">
-                        <h3 class="fw-semibold text-primary">Gede Parma</h3>
-                        <p class="text-muted fs-5">
-                            As the founder of Bali Transport, Gede Parma has dedicated his life to providing exceptional transportation and tour services in Bali. With a passion for travel and a deep understanding of Bali's diverse landscapes and culture, Gede ensures that every journey with Bali Transport is memorable and tailored to your unique preferences.
-                        </p>
-                        <p class="text-muted fs-5">
-                            Gede's commitment to excellence, combined with his friendly and professional approach, makes Bali Transport the preferred choice for travelers seeking reliable and personalized experiences in Bali.
-                        </p>
-                    </div>
+                <div class="col-lg-8 col-md-10 text-center">
+                    <img src="images/WhatsApp-Image-2024-11-04-at-11.23.55.jpeg" alt="Owner of Bali Transport" title="Owner of Bali Transport" class="img-fluid rounded-circle shadow mb-3" style="width: 200px; height: 200px; object-fit: cover;">
+                    <h3 class="text-primary">Gede Parma</h3>
+                    <p class="text-muted fs-5">
+                        As the founder of Bali Transport, Gede Parma has dedicated his life to offering exceptional transportation and tour services. His passion for travel and deep understanding of Bali ensures every journey is tailored and enriching.
+                    </p>
+                    <p class="text-muted fs-5">
+                        Gede’s commitment to excellence and warm hospitality makes Bali Transport the top choice for travelers seeking a genuine Balinese experience.
+                    </p>
                 </div>
             </div>
         </section>
 
         <!-- Key Attractions Section -->
-        <section class="mb-5" aria-labelledby="key-attractions-title">
-            <h2 id="key-attractions-title" class="section-heading text-center mb-4 fw-semibold text-primary">Explore Bali's Top Attractions</h2>
+        <section class="mb-5">
+            <h2 class="section-heading text-primary">Explore Bali's Top Attractions</h2>
             <div class="row">
                 <!-- Sangeh Monkey Forest Bali -->
                 <div class="col-md-3 col-sm-6 mb-4">
                     <div class="card h-100">
                         <img src="images/monkey-forest.jpg" class="card-img-top" alt="Sangeh Monkey Forest" title="Sangeh Monkey Forest" style="height: 200px; object-fit: cover;">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Sangeh Monkey Forest</h5>
-                            <p class="card-text">Experience the playful monkeys and serene nature trails at Sangeh Monkey Forest.</p>
-                            <a href="gallery.html#sangeh-monkey-forest" class="btn btn-primary" title="Learn more about Sangeh Monkey Forest" aria-label="Learn more about Sangeh Monkey Forest">Discover More</a>
+                            <h5>Sangeh Monkey Forest</h5>
+                            <p>Interact with playful monkeys and walk serene forest trails.</p>
+                            <a href="gallery.html#sangeh-monkey-forest" class="btn btn-primary" title="Discover Sangeh Monkey Forest">Discover More</a>
                         </div>
                     </div>
                 </div>
@@ -185,9 +288,9 @@
                     <div class="card h-100">
                         <img src="images/pexels-printproper-2803276.jpg" class="card-img-top" alt="Bali Tourist Attractions" title="Bali Tourist Attractions" style="height: 200px; object-fit: cover;">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Bali Tourist Attractions</h5>
-                            <p class="card-text">Explore the must-see spots that make Bali a top destination.</p>
-                            <a href="services-airport.html#tourist-attractions" class="btn btn-primary" title="Learn more about Bali Tourist Attractions" aria-label="Learn more about Bali Tourist Attractions">Explore Now</a>
+                            <h5>Bali Tourist Attractions</h5>
+                            <p>Must-see spots that capture Bali’s diverse beauty.</p>
+                            <a href="services-airport.html#tourist-attractions" class="btn btn-primary" title="Explore Bali’s attractions">Explore Now</a>
                         </div>
                     </div>
                 </div>
@@ -196,9 +299,9 @@
                     <div class="card h-100">
                         <img src="images/tour2.jpg" class="card-img-top" alt="Bali Best Places to Visit" title="Bali Best Places to Visit" style="height: 200px; object-fit: cover;">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Bali Best Places to Visit</h5>
-                            <p class="card-text">Discover the top locations that showcase Bali's diverse beauty.</p>
-                            <a href="bali-best-places.html" class="btn btn-primary" title="Learn more about Bali Best Places to Visit" aria-label="Learn more about Bali Best Places to Visit">Find Out More</a>
+                            <h5>Bali Best Places</h5>
+                            <p>Discover top locations showcasing Bali’s essence.</p>
+                            <a href="contact.html" class="btn btn-primary" title="Find Out More About Bali’s Best Places">Find Out More</a>
                         </div>
                     </div>
                 </div>
@@ -207,16 +310,16 @@
                     <div class="card h-100">
                         <img src="images/beach2.jpg" class="card-img-top" alt="Bali Sunset Beach" title="Bali Sunset Beach" style="height: 200px; object-fit: cover;">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Bali Sunset Beach</h5>
-                            <p class="card-text">Enjoy breathtaking sunsets at Bali's most beautiful beaches.</p>
-                            <a href="gallery.html#sunset-beach" class="btn btn-primary" title="Learn more about Bali Sunset Beach" aria-label="Learn more about Bali Sunset Beach">Visit Now</a>
+                            <h5>Bali Sunset Beach</h5>
+                            <p>Witness breathtaking sunsets over tranquil shores.</p>
+                            <a href="gallery.html#sunset-beach" class="btn btn-primary" title="Visit Bali Sunset Beach">Visit Now</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Customer Testimonials Section -->
+      <!-- Customer Testimonials Section -->
         <section class="section mb-5" aria-labelledby="customer-testimonials-title">
             <h2 id="customer-testimonials-title" class="section-heading text-center mb-4 fw-semibold text-primary">Customer Testimonials</h2>
             <div class="row g-4">
@@ -382,23 +485,11 @@
         </section>
 
         <!-- Call to Action Section -->
-        <section class="text-center mb-5" aria-labelledby="cta-title">
-            <h2 id="cta-title" class="section-heading text-primary fw-semibold mb-4">Ready to Explore Bali with Us?</h2>
-            <p class="mb-4 fs-5 text-muted">
-                Whether you're planning your first trip or returning for more adventures, Bali Transport is here to make your journey exceptional.
-            </p>
-            <a href="contact.html"
-               class="btn btn-danger btn-lg me-3 mb-3 rounded-pill px-4 py-2"
-               title="Contact us to plan your Bali adventure" 
-               aria-label="Contact us to plan your Bali adventure">
-               Contact Us
-            </a>
-            <a href="gallery.html"
-               class="btn btn-outline-primary btn-lg mb-3 rounded-pill px-4 py-2"
-               title="View our services and packages" 
-               aria-label="View our services and packages">
-               View Services
-            </a>
+        <section class="text-center mb-5">
+            <h2 class="section-heading text-primary">Ready to Explore Bali with Us?</h2>
+            <p class="mb-4 fs-5 text-muted">Whether you’re a first-time visitor or returning for more adventures, we’re here to make your journey memorable.</p>
+            <a href="contact.html" class="btn btn-danger btn-lg me-3 mb-3 px-4 py-2" title="Contact us to plan your Bali adventure">Contact Us</a>
+            <a href="gallery.html" class="btn btn-outline-primary btn-lg mb-3 px-4 py-2" title="View our services and packages">View Services</a>
         </section>
     </main>
 
@@ -408,7 +499,7 @@
             <div class="row">
                 <!-- Company Info -->
                 <div class="col-md-4 mb-4">
-                    <h5 class="fw-semibold mb-3">Bali Transport</h5>
+                    <h5 class="mb-3">Bali Transport</h5>
                     <p>Jl. Sunset Road No. 123, Jimbaran, Bali, Indonesia</p>
                     <p class="mb-2"><strong>Phone / WhatsApp:</strong> 
                         <a href="tel:+628123925805" class="text-white text-decoration-underline" title="Call or WhatsApp Bali Transport">+62 8123 92 5805</a>
@@ -419,7 +510,7 @@
                 </div>
                 <!-- Quick Links -->
                 <div class="col-md-4 mb-4">
-                    <h5 class="fw-semibold mb-3">Quick Links</h5>
+                    <h5 class="mb-3">Quick Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="index.html" class="text-white text-decoration-none" title="Home">Home</a></li>
                         <li><a href="services-airport.html" class="text-white text-decoration-none" title="Airport Travel">Airport Travel</a></li>
@@ -430,52 +521,31 @@
                 </div>
                 <!-- Social Media -->
                 <div class="col-md-4 mb-4">
-                    <h5 class="fw-semibold mb-3">Follow Us</h5>
-                    <div class="d-flex justify-content-center">
+                    <h5 class="mb-3">Follow Us</h5>
+                    <div class="d-flex justify-content-start flex-wrap">
                         <a href="https://www.facebook.com/TRANSBALINOW" 
-                           class="btn btn-outline-primary me-2 mb-2" 
-                           target="_blank" 
-                           title="Follow Bali Transport on Facebook" 
-                           aria-label="Follow us on Facebook">
+                           class="btn btn-outline-primary me-2 mb-2"
+                           target="_blank"
+                           title="Follow Bali Transport on Facebook">
                             <i class="fab fa-facebook-f me-1"></i> Facebook
                         </a>
-                        <a href="https://www.instagram.com/transbali_activity/" 
-                           class="btn btn-outline-danger me-2 mb-2" 
-                           target="_blank" 
-                           title="Follow Bali Transport on Instagram" 
-                           aria-label="Follow us on Instagram">
+                        <a href="https://www.instagram.com/transbali_activity/"
+                           class="btn btn-outline-danger me-2 mb-2"
+                           target="_blank"
+                           title="Follow Bali Transport on Instagram">
                             <i class="fab fa-instagram me-1"></i> Instagram
                         </a>
-                        <a href="https://www.tripadvisor.co.id/Attraction_Review-g297696-d13271730-Reviews-Gede_Bali_Tour-Jimbaran_South_Kuta_Bali.html" 
-                           class="btn btn-outline-success me-2 mb-2 d-none d-md-flex" 
-                           target="_blank" 
-                           title="Read our reviews on TripAdvisor" 
-                           aria-label="Read our reviews on TripAdvisor">
+                        <a href="https://www.tripadvisor.co.id/Attraction_Review-g297696-d13271730-Reviews-Gede_Bali_Tour-Jimbaran_South_Kuta_Bali.html"
+                           class="btn btn-outline-success me-2 mb-2 d-none d-md-flex"
+                           target="_blank"
+                           title="Read our reviews on TripAdvisor">
                             <i class="fab fa-tripadvisor me-1"></i> TripAdvisor
                         </a>
-                        <a href="https://maps.app.goo.gl/KCKmfakCv1j1XM646" 
-                           class="btn btn-outline-warning me-2 mb-2 d-none d-md-flex" 
-                           target="_blank" 
-                           title="View our Google Business Profile" 
-                           aria-label="View our Google Business Profile">
+                        <a href="https://maps.app.goo.gl/KCKmfakCv1j1XM646"
+                           class="btn btn-outline-warning me-2 mb-2 d-none d-md-flex"
+                           target="_blank"
+                           title="View our Google Business Profile">
                             <i class="fab fa-google me-1"></i> Google
-                        </a>
-                    </div>
-                    <!-- For smaller screens, show TripAdvisor and Google links below -->
-                    <div class="col-12 d-flex d-md-none">
-                        <a href="https://maps.app.goo.gl/KCKmfakCv1j1XM646" 
-                           class="btn btn-outline-warning me-2 mb-2 d-flex d-md-none" 
-                           target="_blank" 
-                           title="View our Google Business Profile" 
-                           aria-label="View our Google Business Profile">
-                            <i class="fab fa-google me-1"></i> Google
-                        </a>
-                        <a href="https://www.tripadvisor.co.id/Attraction_Review-g297696-d13271730-Reviews-Gede_Bali_Tour-Jimbaran_South_Kuta_Bali.html" 
-                           class="btn btn-outline-success me-2 mb-2 d-flex d-md-none" 
-                           target="_blank" 
-                           title="Read our reviews on TripAdvisor" 
-                           aria-label="Read our reviews on TripAdvisor">
-                            <i class="fab fa-tripadvisor me-1"></i> TripAdvisor
                         </a>
                     </div>
                 </div>
@@ -484,10 +554,14 @@
             <a href="https://cleandesignuk.com" class="text-white text-decoration-none" title="Website design by Clean Design UK" aria-label="Visit Clean Design UK website">
                 <p class="text-center mt-4 mb-0">Website by Clean Design UK</p>
             </a>
-        </footer>
+        </div>
+    </footer>
 
     <!-- Bootstrap & Font Awesome JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </body>
 </html>
+
+
+       
